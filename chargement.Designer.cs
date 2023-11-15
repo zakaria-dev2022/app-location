@@ -31,12 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(chargement));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,20 +54,24 @@
             this.panel1.Size = new System.Drawing.Size(954, 555);
             this.panel1.TabIndex = 0;
             // 
-            // guna2Elipse1
+            // label2
             // 
-            this.guna2Elipse1.BorderRadius = 20;
-            this.guna2Elipse1.TargetControl = this;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.Location = new System.Drawing.Point(370, 360);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(192, 37);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Chargement...";
             // 
-            // label1
+            // guna2ProgressBar1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.Location = new System.Drawing.Point(161, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(623, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Application De Getion Locapplication De Voiture";
+            this.guna2ProgressBar1.Location = new System.Drawing.Point(138, 476);
+            this.guna2ProgressBar1.Name = "guna2ProgressBar1";
+            this.guna2ProgressBar1.Size = new System.Drawing.Size(687, 19);
+            this.guna2ProgressBar1.TabIndex = 3;
+            this.guna2ProgressBar1.Text = "guna2ProgressBar1";
+            this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
             // pictureBox1
             // 
@@ -80,24 +83,20 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2ProgressBar1
+            // label1
             // 
-            this.guna2ProgressBar1.Location = new System.Drawing.Point(138, 476);
-            this.guna2ProgressBar1.Name = "guna2ProgressBar1";
-            this.guna2ProgressBar1.Size = new System.Drawing.Size(687, 19);
-            this.guna2ProgressBar1.TabIndex = 3;
-            this.guna2ProgressBar1.Text = "guna2ProgressBar1";
-            this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.Location = new System.Drawing.Point(161, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(623, 37);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Application De Getion Locapplication De Voiture";
             // 
-            // label2
+            // guna2Elipse1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.Location = new System.Drawing.Point(370, 360);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 37);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Chargement...";
+            this.guna2Elipse1.BorderRadius = 20;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // chargement
             // 
@@ -123,7 +122,6 @@
         private Guna.UI2.WinForms.Guna2ProgressBar guna2ProgressBar1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

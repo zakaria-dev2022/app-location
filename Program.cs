@@ -16,7 +16,7 @@ namespace Gestion_Location_Voiture
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new chargement());
+            Application.Run(new client());
         }
     }
 }

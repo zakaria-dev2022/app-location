@@ -12,3 +12,6 @@ C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion Locatio
 C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion Location Voiture.csproj.CopyComplete
 C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion Location Voiture.exe
 C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion Location Voiture.pdb
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion_Location_Voiture.menu.resources
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion_Location_Voiture.voiture.resources
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion_Location_Voiture.client.resources
