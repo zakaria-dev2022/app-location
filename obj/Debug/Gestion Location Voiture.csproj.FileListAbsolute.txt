@@ -1,0 +1,14 @@
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\bin\Debug\Gestion Location Voiture.exe.config
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\bin\Debug\Gestion Location Voiture.exe
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\bin\Debug\Gestion Location Voiture.pdb
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\bin\Debug\Guna.UI2.dll
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion Location Voiture.csproj.AssemblyReference.cache
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion Location Voiture.csproj.SuggestedBindingRedirects.cache
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion_Location_Voiture.chargement.resources
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion_Location_Voiture.connection.resources
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion_Location_Voiture.Properties.Resources.resources
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion Location Voiture.csproj.GenerateResource.cache
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion Location Voiture.csproj.CoreCompileInputs.cache
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion Location Voiture.csproj.CopyComplete
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion Location Voiture.exe
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion Location Voiture.pdb
