@@ -70,6 +70,7 @@
     <Compile Include="connection.Designer.cs">
       <DependentUpon>connection.cs</DependentUpon>
     </Compile>
+    <Compile Include="fonctions.cs" />
     <Compile Include="menu.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -31,26 +31,26 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtnm = new System.Windows.Forms.TextBox();
+            this.txtnp = new System.Windows.Forms.TextBox();
+            this.txtnc = new System.Windows.Forms.TextBox();
+            this.txtt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.txtdd = new System.Windows.Forms.DateTimePicker();
+            this.txtdr = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tableaux = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.txtp = new System.Windows.Forms.TextBox();
+            this.enregistrer = new Guna.UI2.WinForms.Guna2Button();
+            this.modifier = new Guna.UI2.WinForms.Guna2Button();
+            this.supprimer = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableaux)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,33 +88,33 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "précedent ";
             // 
-            // textBox1
+            // txtnm
             // 
-            this.textBox1.Location = new System.Drawing.Point(45, 159);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 26);
-            this.textBox1.TabIndex = 1;
+            this.txtnm.Location = new System.Drawing.Point(45, 159);
+            this.txtnm.Name = "txtnm";
+            this.txtnm.Size = new System.Drawing.Size(182, 26);
+            this.txtnm.TabIndex = 1;
             // 
-            // textBox2
+            // txtnp
             // 
-            this.textBox2.Location = new System.Drawing.Point(340, 159);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 26);
-            this.textBox2.TabIndex = 2;
+            this.txtnp.Location = new System.Drawing.Point(340, 159);
+            this.txtnp.Name = "txtnp";
+            this.txtnp.Size = new System.Drawing.Size(182, 26);
+            this.txtnp.TabIndex = 2;
             // 
-            // textBox3
+            // txtnc
             // 
-            this.textBox3.Location = new System.Drawing.Point(618, 159);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(182, 26);
-            this.textBox3.TabIndex = 3;
+            this.txtnc.Location = new System.Drawing.Point(618, 159);
+            this.txtnc.Name = "txtnc";
+            this.txtnc.Size = new System.Drawing.Size(182, 26);
+            this.txtnc.TabIndex = 3;
             // 
-            // textBox4
+            // txtt
             // 
-            this.textBox4.Location = new System.Drawing.Point(885, 159);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(182, 26);
-            this.textBox4.TabIndex = 4;
+            this.txtt.Location = new System.Drawing.Point(885, 159);
+            this.txtt.Name = "txtt";
+            this.txtt.Size = new System.Drawing.Size(182, 26);
+            this.txtt.TabIndex = 4;
             // 
             // label2
             // 
@@ -160,23 +160,23 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "N° Tel";
             // 
-            // dateTimePicker1
+            // txtdd
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(128, 249);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2120, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(251, 26);
-            this.dateTimePicker1.TabIndex = 9;
+            this.txtdd.Location = new System.Drawing.Point(128, 249);
+            this.txtdd.MaxDate = new System.DateTime(2120, 12, 31, 0, 0, 0, 0);
+            this.txtdd.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.txtdd.Name = "txtdd";
+            this.txtdd.Size = new System.Drawing.Size(251, 26);
+            this.txtdd.TabIndex = 9;
             // 
-            // dateTimePicker2
+            // txtdr
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(444, 249);
-            this.dateTimePicker2.MaxDate = new System.DateTime(2120, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(251, 26);
-            this.dateTimePicker2.TabIndex = 10;
+            this.txtdr.Location = new System.Drawing.Point(444, 249);
+            this.txtdr.MaxDate = new System.DateTime(2120, 12, 31, 0, 0, 0, 0);
+            this.txtdr.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.txtdr.Name = "txtdr";
+            this.txtdr.Size = new System.Drawing.Size(251, 26);
+            this.txtdr.TabIndex = 10;
             // 
             // label8
             // 
@@ -200,17 +200,17 @@
             this.label9.TabIndex = 13;
             this.label9.Text = "Date De Demande";
             // 
-            // dataGridView1
+            // tableaux
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 366);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1063, 289);
-            this.dataGridView1.TabIndex = 15;
+            this.tableaux.BackgroundColor = System.Drawing.Color.White;
+            this.tableaux.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tableaux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableaux.Location = new System.Drawing.Point(45, 366);
+            this.tableaux.Name = "tableaux";
+            this.tableaux.RowHeadersWidth = 62;
+            this.tableaux.RowTemplate.Height = 28;
+            this.tableaux.Size = new System.Drawing.Size(1063, 289);
+            this.tableaux.TabIndex = 15;
             // 
             // label7
             // 
@@ -223,85 +223,86 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "N° Permis";
             // 
-            // textBox5
+            // txtp
             // 
-            this.textBox5.Location = new System.Drawing.Point(741, 249);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(182, 26);
-            this.textBox5.TabIndex = 16;
-            this.textBox5.Tag = "";
+            this.txtp.Location = new System.Drawing.Point(741, 249);
+            this.txtp.Name = "txtp";
+            this.txtp.Size = new System.Drawing.Size(182, 26);
+            this.txtp.TabIndex = 16;
+            this.txtp.Tag = "";
             // 
-            // guna2Button1
+            // enregistrer
             // 
-            this.guna2Button1.BorderRadius = 18;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Teal;
-            this.guna2Button1.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(476, 299);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 18;
-            this.guna2Button1.Text = "Enregistrer";
+            this.enregistrer.BorderRadius = 18;
+            this.enregistrer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.enregistrer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.enregistrer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.enregistrer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.enregistrer.FillColor = System.Drawing.Color.Teal;
+            this.enregistrer.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enregistrer.ForeColor = System.Drawing.Color.White;
+            this.enregistrer.Location = new System.Drawing.Point(476, 299);
+            this.enregistrer.Name = "enregistrer";
+            this.enregistrer.Size = new System.Drawing.Size(180, 45);
+            this.enregistrer.TabIndex = 18;
+            this.enregistrer.Text = "Enregistrer";
+            this.enregistrer.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // guna2Button2
+            // modifier
             // 
-            this.guna2Button2.BorderRadius = 18;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Teal;
-            this.guna2Button2.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(176, 299);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button2.TabIndex = 19;
-            this.guna2Button2.Text = "Modifier";
+            this.modifier.BorderRadius = 18;
+            this.modifier.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.modifier.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.modifier.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.modifier.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.modifier.FillColor = System.Drawing.Color.Teal;
+            this.modifier.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifier.ForeColor = System.Drawing.Color.White;
+            this.modifier.Location = new System.Drawing.Point(176, 299);
+            this.modifier.Name = "modifier";
+            this.modifier.Size = new System.Drawing.Size(180, 45);
+            this.modifier.TabIndex = 19;
+            this.modifier.Text = "Modifier";
             // 
-            // guna2Button3
+            // supprimer
             // 
-            this.guna2Button3.BorderRadius = 18;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.Teal;
-            this.guna2Button3.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(756, 299);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button3.TabIndex = 20;
-            this.guna2Button3.Text = "Supprimer";
+            this.supprimer.BorderRadius = 18;
+            this.supprimer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.supprimer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.supprimer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.supprimer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.supprimer.FillColor = System.Drawing.Color.Teal;
+            this.supprimer.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supprimer.ForeColor = System.Drawing.Color.White;
+            this.supprimer.Location = new System.Drawing.Point(756, 299);
+            this.supprimer.Name = "supprimer";
+            this.supprimer.Size = new System.Drawing.Size(180, 45);
+            this.supprimer.TabIndex = 20;
+            this.supprimer.Text = "Supprimer";
             // 
             // client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 667);
-            this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.supprimer);
+            this.Controls.Add(this.modifier);
+            this.Controls.Add(this.enregistrer);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtp);
+            this.Controls.Add(this.tableaux);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtdr);
+            this.Controls.Add(this.txtdd);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtt);
+            this.Controls.Add(this.txtnc);
+            this.Controls.Add(this.txtnp);
+            this.Controls.Add(this.txtnm);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "client";
@@ -310,7 +311,7 @@
             this.Load += new System.EventHandler(this.client_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableaux)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,23 +322,23 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtnm;
+        private System.Windows.Forms.TextBox txtnp;
+        private System.Windows.Forms.TextBox txtnc;
+        private System.Windows.Forms.TextBox txtt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker txtdd;
+        private System.Windows.Forms.DateTimePicker txtdr;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tableaux;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private System.Windows.Forms.TextBox txtp;
+        private Guna.UI2.WinForms.Guna2Button enregistrer;
+        private Guna.UI2.WinForms.Guna2Button modifier;
+        private Guna.UI2.WinForms.Guna2Button supprimer;
     }
 }
