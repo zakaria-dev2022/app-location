@@ -34,17 +34,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.deconnecter = new System.Windows.Forms.Label();
+            this.pictureBoxGV = new System.Windows.Forms.PictureBox();
+            this.pictureBoxGC = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,47 +77,54 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Teal;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.panel2.Controls.Add(this.deconnecter);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 458);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(954, 97);
             this.panel2.TabIndex = 1;
             // 
-            // label2
+            // deconnecter
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(755, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Se Déconnecter";
+            this.deconnecter.AutoSize = true;
+            this.deconnecter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deconnecter.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.deconnecter.ForeColor = System.Drawing.Color.White;
+            this.deconnecter.Location = new System.Drawing.Point(755, 27);
+            this.deconnecter.Name = "deconnecter";
+            this.deconnecter.Size = new System.Drawing.Size(162, 29);
+            this.deconnecter.TabIndex = 1;
+            this.deconnecter.Text = "Se Déconnecter";
+            this.deconnecter.Click += new System.EventHandler(this.deconnecter_Click);
             // 
-            // pictureBox1
+            // pictureBoxGV
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 199);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 141);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxGV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxGV.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxGV.Image")));
+            this.pictureBoxGV.Location = new System.Drawing.Point(22, 199);
+            this.pictureBoxGV.Name = "pictureBoxGV";
+            this.pictureBoxGV.Size = new System.Drawing.Size(258, 141);
+            this.pictureBoxGV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxGV.TabIndex = 3;
+            this.pictureBoxGV.TabStop = false;
+            this.pictureBoxGV.Click += new System.EventHandler(this.pictureBoxGV_Click);
             // 
-            // pictureBox2
+            // pictureBoxGC
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(348, 199);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(258, 141);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxGC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxGC.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxGC.Image")));
+            this.pictureBoxGC.Location = new System.Drawing.Point(348, 199);
+            this.pictureBoxGC.Name = "pictureBoxGC";
+            this.pictureBoxGC.Size = new System.Drawing.Size(258, 141);
+            this.pictureBoxGC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxGC.TabIndex = 4;
+            this.pictureBoxGC.TabStop = false;
+            this.pictureBoxGC.Click += new System.EventHandler(this.pictureBoxGC_Click);
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(659, 199);
             this.pictureBox3.Name = "pictureBox3";
@@ -129,6 +136,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label3.ForeColor = System.Drawing.Color.Teal;
             this.label3.Location = new System.Drawing.Point(41, 369);
@@ -136,10 +144,12 @@
             this.label3.Size = new System.Drawing.Size(222, 33);
             this.label3.TabIndex = 2;
             this.label3.Text = "Gestion De Voiture";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Arial Narrow", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label6.ForeColor = System.Drawing.Color.Teal;
             this.label6.Location = new System.Drawing.Point(368, 369);
@@ -147,10 +157,12 @@
             this.label6.Size = new System.Drawing.Size(207, 33);
             this.label6.TabIndex = 8;
             this.label6.Text = "Gestion De Client";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.Color.Teal;
             this.label4.Location = new System.Drawing.Point(681, 369);
@@ -168,8 +180,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxGC);
+            this.Controls.Add(this.pictureBoxGV);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -180,8 +192,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -194,12 +206,12 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label deconnecter;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxGC;
+        private System.Windows.Forms.PictureBox pictureBoxGV;
     }
 }

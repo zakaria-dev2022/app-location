@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.precedentGC = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtnm = new System.Windows.Forms.TextBox();
             this.txtnp = new System.Windows.Forms.TextBox();
             this.txtnc = new System.Windows.Forms.TextBox();
@@ -56,13 +56,25 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.precedentGC);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1153, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // precedentGC
+            // 
+            this.precedentGC.AutoSize = true;
+            this.precedentGC.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.precedentGC.ForeColor = System.Drawing.Color.White;
+            this.precedentGC.Location = new System.Drawing.Point(1009, 50);
+            this.precedentGC.Name = "precedentGC";
+            this.precedentGC.Size = new System.Drawing.Size(113, 29);
+            this.precedentGC.TabIndex = 4;
+            this.precedentGC.Text = "précedent ";
+            this.precedentGC.Click += new System.EventHandler(this.label3_Click);
             // 
             // label1
             // 
@@ -76,17 +88,6 @@
             this.label1.Size = new System.Drawing.Size(375, 57);
             this.label1.TabIndex = 3;
             this.label1.Text = "Gestion De Clients";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1009, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 29);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "précedent ";
             // 
             // txtnm
             // 
@@ -279,6 +280,7 @@
             this.supprimer.Size = new System.Drawing.Size(180, 45);
             this.supprimer.TabIndex = 20;
             this.supprimer.Text = "Supprimer";
+            this.supprimer.Click += new System.EventHandler(this.supprimer_Click);
             // 
             // client
             // 
@@ -321,7 +323,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label precedentGC;
         private System.Windows.Forms.TextBox txtnm;
         private System.Windows.Forms.TextBox txtnp;
         private System.Windows.Forms.TextBox txtnc;

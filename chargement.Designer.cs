@@ -32,10 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(chargement));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.progress = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.porssentage = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -43,8 +45,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.porssentage);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.guna2ProgressBar1);
+            this.panel1.Controls.Add(this.progress);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -53,25 +56,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(954, 555);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.Location = new System.Drawing.Point(370, 360);
+            this.label2.Location = new System.Drawing.Point(380, 346);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(192, 37);
             this.label2.TabIndex = 4;
             this.label2.Text = "Chargement...";
             // 
-            // guna2ProgressBar1
+            // progress
             // 
-            this.guna2ProgressBar1.Location = new System.Drawing.Point(138, 476);
-            this.guna2ProgressBar1.Name = "guna2ProgressBar1";
-            this.guna2ProgressBar1.Size = new System.Drawing.Size(687, 19);
-            this.guna2ProgressBar1.TabIndex = 3;
-            this.guna2ProgressBar1.Text = "guna2ProgressBar1";
-            this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.progress.Location = new System.Drawing.Point(138, 476);
+            this.progress.Name = "progress";
+            this.progress.Size = new System.Drawing.Size(687, 19);
+            this.progress.TabIndex = 3;
+            this.progress.Text = "guna2ProgressBar1";
+            this.progress.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
             // pictureBox1
             // 
@@ -87,16 +91,31 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.Location = new System.Drawing.Point(161, 49);
+            this.label1.Location = new System.Drawing.Point(204, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(623, 37);
+            this.label1.Size = new System.Drawing.Size(547, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Application De Getion Locapplication De Voiture";
+            this.label1.Text = "Application De Getion Location De Voiture";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
+            // 
+            // porssentage
+            // 
+            this.porssentage.AutoSize = true;
+            this.porssentage.Font = new System.Drawing.Font("Arial Narrow", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.porssentage.Location = new System.Drawing.Point(460, 419);
+            this.porssentage.Name = "porssentage";
+            this.porssentage.Size = new System.Drawing.Size(38, 37);
+            this.porssentage.TabIndex = 5;
+            this.porssentage.Text = "...";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // chargement
             // 
@@ -108,6 +127,7 @@
             this.Name = "chargement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.chargement_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -119,10 +139,12 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ProgressBar guna2ProgressBar1;
+        private Guna.UI2.WinForms.Guna2ProgressBar progress;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Label porssentage;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

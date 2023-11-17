@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.HtmlControls;
 using System.Windows.Forms;
 
 namespace Gestion_Location_Voiture
@@ -35,32 +36,19 @@ namespace Gestion_Location_Voiture
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            /* if (txtnm.Text != "" && txtnp.Text != "" && txtt.Text != "" && txtnc.Text != "" && txtdr.Text != "" && txtdd.Text != "" && txtp.Text != "")
+             if (txtnm.Text != "" && txtnp.Text != "" && txtt.Text != "" && txtnc.Text != "" && txtdr.Text != "" && txtdd.Text != "" && txtp.Text != "")
              {
-                 SqlCommand cmd = new SqlCommand("insert into donner_clientTB values('" + txtnm.Text + "','" + txtnp.Text + "','" + txtnc.Text + "','" + txtt.Text + "','" + txtdd.Text + "',,'" + txtdr.Text + "',,'" + txtp.Text + "')", cnx);
-                 cmd.ExecuteNonQuery();
-                 MessageBox.Show("enregistrement effectué", "Gestion facturation clients");
-                 remplir();
-                 //Nouveau_Click(sender, e);
+            cmd = new SqlCommand("insert into donner_clientTB values('" + txtnm.Text + "', '" + txtnp.Text + "', '" + txtnc.Text + "', '" + txtt.Text + "', '" + txtdd.Text + "','" + txtdr.Text + "','" + txtp.Text + "')", Connection);
+            cmd.ExecuteNonQuery();
+            remplir();
+            MessageBox.Show("Donner Enregistrer","Gestion Location Voiture");
 
              }
              else
              {
-                 MessageBox.Show("verifier la saisie");
-             }*/
-            /*string insertQuery = "INSERT INTO client ([N°matricule],[nom_prenom],[N°cin],[N°tel],date_reservation,date_retour,[N°permis]) " +
-               "VALUES ([N°matricule], [nom_prenom], [N°cin], [N°tel], date_reservation,date_retour,[N°permis])";*/
-            cmd = new SqlCommand("insert into donner_clientTB values('" + txtnm.Text + "', '" + txtnp.Text + "', '" + txtnc.Text + "', '" + txtt.Text + "', '" + txtdd.Text + "','" + txtdr.Text + "','" + txtp.Text + "')", Connection);
-            /*cmd.Parameters.AddWithValue("[N°matricule]", txtnm.Text);
-            cmd.Parameters.AddWithValue("[nom_prenom]", txtnp.Text);
-            cmd.Parameters.AddWithValue("[N°cin]", txtnc.Text);
-            cmd.Parameters.AddWithValue("[N°tel]", txtt.Text);
-            cmd.Parameters.AddWithValue("date_reservation", txtdd.Text);
-            cmd.Parameters.AddWithValue("date_retour", txtdr.Text);
-            cmd.Parameters.AddWithValue("[N°permis]", txtp.Text);*/
-            cmd.ExecuteNonQuery();
-            remplir();
-            MessageBox.Show("ok ");
+                 MessageBox.Show("Verifier Les Donners!!!", "Gestion Location Voiture");
+             }
+            
         }
         private void remplir()
         {
@@ -71,6 +59,37 @@ namespace Gestion_Location_Voiture
             dataAdapter.Fill(dt);
             //liez le datatable au tableau
             tableaux.DataSource = dt;
+        }
+
+        private void supprimer_Click(object sender, EventArgs e)
+        {
+           string ncr = Microsoft.VisualBasic.Interaction.InputBox("N°Client Que Vous Voulez Supprimer", "Gestion Location Voiture");
+             cmd = new SqlCommand("select *from donner_clientTB where [id]='" + ncr + "'", Connection);
+            SqlDataReader rd = cmd.ExecuteReader();
+            if (rd.HasRows)
+            {
+                rd.Close();
+                if (MessageBox.Show("Effectuer La Suppression", "Gestion Location Voiture", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    cmd = new SqlCommand("delete from donner_clientTB where [id]='" + ncr + "'", Connection);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Suppression Effectué", "Gestion Location Voiture");
+                    remplir();
+                }
+            }
+                
+            else
+            {
+                MessageBox.Show("N°Client " + ncr + " Introuvable ", "Gestion Location Voiture");
+            }
+            rd.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            menu menu = new menu();
+            menu.Show();
+            this.Hide();
         }
     }
 }

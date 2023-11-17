@@ -15,6 +15,40 @@ namespace Gestion_Location_Voiture
         public chargement()
         {
             InitializeComponent();
+            timer1.Start();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void chargement_Load(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+            int p = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            p++;
+            progress.Value = p;
+            porssentage.Text = p.ToString() + " %";
+            if (progress.Value == 100)
+            {
+                progress.Value = 0;
+                timer1.Stop();
+                connection cnx = new connection();
+                cnx.Show();
+                this.Hide();
+            }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
