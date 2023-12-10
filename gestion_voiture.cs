@@ -76,7 +76,7 @@ namespace Gestion_Location_Voiture
         private void modifier_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("Enregistrer La Modification ??", "Gestion Location Voiture", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+           /* if (MessageBox.Show("Enregistrer La Modification ??", "Gestion Location Voiture", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (txtmt.Text != "" && txtmr.Text != "" && txtmd.Text != "" && txttv.Text != "" && txttc.Text != "" && txtp.Text != "" && assur.Image != null && carte_grise.Image != null && la_visite.Image != null && voiture.Image != null)
                 {
@@ -94,7 +94,7 @@ namespace Gestion_Location_Voiture
                 }
 
 
-            }
+            }*/
         }
         private void nouveau()
         {
