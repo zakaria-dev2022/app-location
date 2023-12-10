@@ -167,9 +167,9 @@
             this.label4.ForeColor = System.Drawing.Color.Teal;
             this.label4.Location = new System.Drawing.Point(681, 369);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(222, 33);
+            this.label4.Size = new System.Drawing.Size(239, 33);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Gestion De Voiture";
+            this.label4.Text = "Gestion De Location";
             // 
             // menu
             // 
@@ -188,6 +188,7 @@
             this.Name = "menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menu";
+            this.Load += new System.EventHandler(this.menu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

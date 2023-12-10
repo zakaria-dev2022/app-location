@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(voiture));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.e8 = new System.Windows.Forms.PictureBox();
+            this.e7 = new System.Windows.Forms.PictureBox();
+            this.e4 = new System.Windows.Forms.PictureBox();
+            this.e5 = new System.Windows.Forms.PictureBox();
+            this.e9 = new System.Windows.Forms.PictureBox();
             this.e6 = new System.Windows.Forms.PictureBox();
             this.e3 = new System.Windows.Forms.PictureBox();
             this.e2 = new System.Windows.Forms.PictureBox();
@@ -60,13 +65,12 @@
             this.precedentGV = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.e9 = new System.Windows.Forms.PictureBox();
-            this.e5 = new System.Windows.Forms.PictureBox();
-            this.e4 = new System.Windows.Forms.PictureBox();
-            this.e7 = new System.Windows.Forms.PictureBox();
-            this.e8 = new System.Windows.Forms.PictureBox();
-            this.txtb = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.e8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.e7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.e4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.e5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.e9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.e6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.e3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.e2)).BeginInit();
@@ -90,17 +94,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.l7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.l4)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.e9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.txtb);
             this.panel1.Controls.Add(this.e8);
             this.panel1.Controls.Add(this.e7);
             this.panel1.Controls.Add(this.e4);
@@ -138,6 +136,61 @@
             this.panel1.Size = new System.Drawing.Size(1250, 732);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // e8
+            // 
+            this.e8.Image = ((System.Drawing.Image)(resources.GetObject("e8.Image")));
+            this.e8.Location = new System.Drawing.Point(507, 557);
+            this.e8.Name = "e8";
+            this.e8.Size = new System.Drawing.Size(258, 141);
+            this.e8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.e8.TabIndex = 33;
+            this.e8.TabStop = false;
+            this.e8.Visible = false;
+            // 
+            // e7
+            // 
+            this.e7.Image = ((System.Drawing.Image)(resources.GetObject("e7.Image")));
+            this.e7.Location = new System.Drawing.Point(143, 557);
+            this.e7.Name = "e7";
+            this.e7.Size = new System.Drawing.Size(258, 141);
+            this.e7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.e7.TabIndex = 32;
+            this.e7.TabStop = false;
+            this.e7.Visible = false;
+            // 
+            // e4
+            // 
+            this.e4.Image = ((System.Drawing.Image)(resources.GetObject("e4.Image")));
+            this.e4.Location = new System.Drawing.Point(143, 393);
+            this.e4.Name = "e4";
+            this.e4.Size = new System.Drawing.Size(258, 141);
+            this.e4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.e4.TabIndex = 31;
+            this.e4.TabStop = false;
+            this.e4.Visible = false;
+            // 
+            // e5
+            // 
+            this.e5.Image = ((System.Drawing.Image)(resources.GetObject("e5.Image")));
+            this.e5.Location = new System.Drawing.Point(507, 393);
+            this.e5.Name = "e5";
+            this.e5.Size = new System.Drawing.Size(258, 141);
+            this.e5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.e5.TabIndex = 30;
+            this.e5.TabStop = false;
+            this.e5.Visible = false;
+            // 
+            // e9
+            // 
+            this.e9.Image = ((System.Drawing.Image)(resources.GetObject("e9.Image")));
+            this.e9.Location = new System.Drawing.Point(896, 557);
+            this.e9.Name = "e9";
+            this.e9.Size = new System.Drawing.Size(258, 141);
+            this.e9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.e9.TabIndex = 29;
+            this.e9.TabStop = false;
+            this.e9.Visible = false;
             // 
             // e6
             // 
@@ -182,6 +235,7 @@
             this.e1.TabIndex = 25;
             this.e1.TabStop = false;
             this.e1.Visible = false;
+            this.e1.MouseHover += new System.EventHandler(this.e1_MouseHover);
             // 
             // c9
             // 
@@ -474,68 +528,6 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // e9
-            // 
-            this.e9.Image = ((System.Drawing.Image)(resources.GetObject("e9.Image")));
-            this.e9.Location = new System.Drawing.Point(896, 557);
-            this.e9.Name = "e9";
-            this.e9.Size = new System.Drawing.Size(258, 141);
-            this.e9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e9.TabIndex = 29;
-            this.e9.TabStop = false;
-            this.e9.Visible = false;
-            // 
-            // e5
-            // 
-            this.e5.Image = ((System.Drawing.Image)(resources.GetObject("e5.Image")));
-            this.e5.Location = new System.Drawing.Point(507, 393);
-            this.e5.Name = "e5";
-            this.e5.Size = new System.Drawing.Size(258, 141);
-            this.e5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e5.TabIndex = 30;
-            this.e5.TabStop = false;
-            this.e5.Visible = false;
-            // 
-            // e4
-            // 
-            this.e4.Image = ((System.Drawing.Image)(resources.GetObject("e4.Image")));
-            this.e4.Location = new System.Drawing.Point(143, 393);
-            this.e4.Name = "e4";
-            this.e4.Size = new System.Drawing.Size(258, 141);
-            this.e4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e4.TabIndex = 31;
-            this.e4.TabStop = false;
-            this.e4.Visible = false;
-            // 
-            // e7
-            // 
-            this.e7.Image = ((System.Drawing.Image)(resources.GetObject("e7.Image")));
-            this.e7.Location = new System.Drawing.Point(143, 557);
-            this.e7.Name = "e7";
-            this.e7.Size = new System.Drawing.Size(258, 141);
-            this.e7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e7.TabIndex = 32;
-            this.e7.TabStop = false;
-            this.e7.Visible = false;
-            // 
-            // e8
-            // 
-            this.e8.Image = ((System.Drawing.Image)(resources.GetObject("e8.Image")));
-            this.e8.Location = new System.Drawing.Point(507, 557);
-            this.e8.Name = "e8";
-            this.e8.Size = new System.Drawing.Size(258, 141);
-            this.e8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e8.TabIndex = 33;
-            this.e8.TabStop = false;
-            this.e8.Visible = false;
-            // 
-            // txtb
-            // 
-            this.txtb.Location = new System.Drawing.Point(190, 190);
-            this.txtb.Name = "txtb";
-            this.txtb.Size = new System.Drawing.Size(158, 26);
-            this.txtb.TabIndex = 34;
-            // 
             // voiture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -548,6 +540,11 @@
             this.Text = "voiture";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.e8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.e7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.e4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.e5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.e9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.e6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.e3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.e2)).EndInit();
@@ -572,11 +569,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.l4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.e9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -618,6 +610,5 @@
         private System.Windows.Forms.PictureBox e4;
         private System.Windows.Forms.PictureBox e5;
         private System.Windows.Forms.PictureBox e9;
-        private System.Windows.Forms.TextBox txtb;
     }
 }

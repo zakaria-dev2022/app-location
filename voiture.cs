@@ -40,7 +40,6 @@ namespace Gestion_Location_Voiture
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             string rch = cbtype.Text;
-            txtb.Text=rch;
 
             if (rch == "Voiture De Luxe")
             {
@@ -153,6 +152,11 @@ namespace Gestion_Location_Voiture
             menu menu = new menu();
             menu.Show();
             this.Hide();
+        }
+
+        private void e1_MouseHover(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -54,5 +54,10 @@ namespace Gestion_Location_Voiture
             client.Show();
             this.Hide();
         }
+
+        private void menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

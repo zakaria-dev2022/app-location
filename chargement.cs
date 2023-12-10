@@ -22,17 +22,17 @@ namespace Gestion_Location_Voiture
         {
             
         }
-
+        
         private void chargement_Load(object sender, EventArgs e)
         {
-            
-            
+
+           
         }
 
-            int p = 0;
+        int p = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            p++;
+           p++;
             progress.Value = p;
             porssentage.Text = p.ToString() + " %";
             if (progress.Value == 100)
@@ -43,10 +43,21 @@ namespace Gestion_Location_Voiture
                 cnx.Show();
                 this.Hide();
             }
-
+            
+          
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progress_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
