@@ -20,3 +20,4 @@ C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion_Locatio
 C:\Users\Zakaria\source\repos\Gestion Location Voiture\bin\Debug\FontAwesome.WPF.dll
 C:\Users\Zakaria\source\repos\Gestion Location Voiture\bin\Debug\FontAwesome.WPF.xml
 C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion_Location_Voiture.gestion_voiture.resources
+C:\Users\Zakaria\source\repos\Gestion Location Voiture\obj\Debug\Gestion_Location_Voiture.img.resources

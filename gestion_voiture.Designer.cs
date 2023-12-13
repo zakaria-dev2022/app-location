@@ -55,6 +55,10 @@
             this.modifier = new System.Windows.Forms.Button();
             this.supprimer = new System.Windows.Forms.Button();
             this.txtid = new System.Windows.Forms.TextBox();
+            this.lb_v = new System.Windows.Forms.Label();
+            this.lb_lv = new System.Windows.Forms.Label();
+            this.lb_cg = new System.Windows.Forms.Label();
+            this.lb_ass = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.assur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voiture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.la_visite)).BeginInit();
@@ -134,7 +138,7 @@
             // 
             // assur
             // 
-            this.assur.Location = new System.Drawing.Point(989, 265);
+            this.assur.Location = new System.Drawing.Point(989, 266);
             this.assur.Margin = new System.Windows.Forms.Padding(4);
             this.assur.Name = "assur";
             this.assur.Size = new System.Drawing.Size(251, 134);
@@ -158,7 +162,7 @@
             // 
             // voiture
             // 
-            this.voiture.Location = new System.Drawing.Point(465, 108);
+            this.voiture.Location = new System.Drawing.Point(465, 91);
             this.voiture.Margin = new System.Windows.Forms.Padding(4);
             this.voiture.Name = "voiture";
             this.voiture.Size = new System.Drawing.Size(251, 135);
@@ -178,7 +182,7 @@
             // 
             // carte_grise
             // 
-            this.carte_grise.Location = new System.Drawing.Point(989, 108);
+            this.carte_grise.Location = new System.Drawing.Point(989, 91);
             this.carte_grise.Margin = new System.Windows.Forms.Padding(4);
             this.carte_grise.Name = "carte_grise";
             this.carte_grise.Size = new System.Drawing.Size(251, 135);
@@ -346,6 +350,7 @@
             // supprimer
             // 
             this.supprimer.BackColor = System.Drawing.Color.Teal;
+            this.supprimer.Enabled = false;
             this.supprimer.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supprimer.ForeColor = System.Drawing.Color.White;
             this.supprimer.Location = new System.Drawing.Point(362, 430);
@@ -365,12 +370,57 @@
             this.txtid.TabIndex = 75;
             this.txtid.Visible = false;
             // 
+            // lb_v
+            // 
+            this.lb_v.AutoSize = true;
+            this.lb_v.Location = new System.Drawing.Point(542, 238);
+            this.lb_v.Name = "lb_v";
+            this.lb_v.Size = new System.Drawing.Size(51, 20);
+            this.lb_v.TabIndex = 76;
+            this.lb_v.Text = "label7";
+            this.lb_v.Visible = false;
+            // 
+            // lb_lv
+            // 
+            this.lb_lv.AutoSize = true;
+            this.lb_lv.Location = new System.Drawing.Point(563, 406);
+            this.lb_lv.Name = "lb_lv";
+            this.lb_lv.Size = new System.Drawing.Size(51, 20);
+            this.lb_lv.TabIndex = 77;
+            this.lb_lv.Text = "label8";
+            this.lb_lv.Visible = false;
+            // 
+            // lb_cg
+            // 
+            this.lb_cg.AutoSize = true;
+            this.lb_cg.Location = new System.Drawing.Point(1090, 235);
+            this.lb_cg.Name = "lb_cg";
+            this.lb_cg.Size = new System.Drawing.Size(51, 20);
+            this.lb_cg.TabIndex = 78;
+            this.lb_cg.Text = "label9";
+            this.lb_cg.Visible = false;
+            // 
+            // lb_ass
+            // 
+            this.lb_ass.AutoSize = true;
+            this.lb_ass.Location = new System.Drawing.Point(1090, 417);
+            this.lb_ass.Name = "lb_ass";
+            this.lb_ass.Size = new System.Drawing.Size(60, 20);
+            this.lb_ass.TabIndex = 79;
+            this.lb_ass.Text = "label10";
+            this.lb_ass.Visible = false;
+            this.lb_ass.Click += new System.EventHandler(this.label10_Click);
+            // 
             // gestion_voiture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1341, 893);
+            this.Controls.Add(this.lb_ass);
+            this.Controls.Add(this.lb_cg);
+            this.Controls.Add(this.lb_lv);
+            this.Controls.Add(this.lb_v);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.modifier);
             this.Controls.Add(this.supprimer);
@@ -443,5 +493,9 @@
         private System.Windows.Forms.Button modifier;
         private System.Windows.Forms.Button supprimer;
         private System.Windows.Forms.TextBox txtid;
+        private System.Windows.Forms.Label lb_v;
+        private System.Windows.Forms.Label lb_lv;
+        private System.Windows.Forms.Label lb_cg;
+        private System.Windows.Forms.Label lb_ass;
     }
 }

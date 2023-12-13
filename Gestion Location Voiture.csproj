@@ -91,6 +91,12 @@
     <Compile Include="gestion_voiture.Designer.cs">
       <DependentUpon>gestion_voiture.cs</DependentUpon>
     </Compile>
+    <Compile Include="img.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="img.Designer.cs">
+      <DependentUpon>img.cs</DependentUpon>
+    </Compile>
     <Compile Include="location.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="gestion_voiture.resx">
       <DependentUpon>gestion_voiture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="img.resx">
+      <DependentUpon>img.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="location.resx">
       <DependentUpon>location.cs</DependentUpon>
