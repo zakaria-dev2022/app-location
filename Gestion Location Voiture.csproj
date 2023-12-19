@@ -85,17 +85,17 @@
     <Compile Include="dashboard.Designer.cs">
       <DependentUpon>dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="gestion_profils.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gestion_profils.Designer.cs">
+      <DependentUpon>gestion_profils.cs</DependentUpon>
+    </Compile>
     <Compile Include="gestion_voiture.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="gestion_voiture.Designer.cs">
       <DependentUpon>gestion_voiture.cs</DependentUpon>
-    </Compile>
-    <Compile Include="img.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="img.Designer.cs">
-      <DependentUpon>img.cs</DependentUpon>
     </Compile>
     <Compile Include="location.cs">
       <SubType>Form</SubType>
@@ -111,6 +111,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="setting.Designer.cs">
+      <DependentUpon>setting.cs</DependentUpon>
+    </Compile>
     <Compile Include="voiture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,11 +135,11 @@
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="gestion_profils.resx">
+      <DependentUpon>gestion_profils.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="gestion_voiture.resx">
       <DependentUpon>gestion_voiture.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="img.resx">
-      <DependentUpon>img.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="location.resx">
       <DependentUpon>location.cs</DependentUpon>
@@ -150,6 +156,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="setting.resx">
+      <DependentUpon>setting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="voiture.resx">
       <DependentUpon>voiture.cs</DependentUpon>
     </EmbeddedResource>

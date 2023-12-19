@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,13 @@ namespace Gestion_Location_Voiture
 {
     public partial class voiture : Form
     {
+        string cnx = "Data Source=DESKTOP-G1088CP;Initial Catalog=Gestion_Location_Voiture;Integrated Security=True";
+        SqlCommand cmd;
+        SqlConnection connection;
+        SqlDataReader rd;
+        OpenFileDialog ofd = new OpenFileDialog();
+        private SqlDataAdapter dataAdapter;
+        private DataTable dt;
         public voiture()
         {
             InitializeComponent();
@@ -32,120 +40,39 @@ namespace Gestion_Location_Voiture
 
         }
 
-        private void pictureBox7_MouseHover(object sender, EventArgs e)
-        {
-            MessageBox.Show("\tMarque : Audi RS6 \n\tPrix : 3000DH/j\n\tN° Matricule : 122323/A/6\n\tModele : 2022\n\t", "Gestion Location De Voiture");
-        }
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            string rch = cbtype.Text;
-
-            if (rch == "Voiture De Luxe")
+            string ncr = Microsoft.VisualBasic.Interaction.InputBox("N°Matricule De Voiture Que Vous Voulez Rechercher", "Gestion Location Voiture");
+            cmd = new SqlCommand("select *from voitures where [matricule]='" + ncr + "'", connection);
+            rd = cmd.ExecuteReader();
+            if (rd.HasRows)
             {
-                l1.Visible = true;
-                l2.Visible = true;
-                l3.Visible = true;
-                l4.Visible = true;
-                l5.Visible = true;
-                l6.Visible = true;
-                l7.Visible = true;
-                l8.Visible = true;
-                l9.Visible = true;
-
-                    e1.Visible = false;
-                    e2.Visible = false;
-                    e3.Visible = false;
-                    e4.Visible = false;
-                    e5.Visible = false;
-                    e6.Visible = false;
-                    e7.Visible = false;
-                    e8.Visible = false;
-                    e9.Visible = false;
-
-                    c1.Visible = false;
-                    c2.Visible = false;
-                    c3.Visible = false;
-                    c4.Visible = false;
-                    c5.Visible = false;
-                    c6.Visible = false;
-                    c7.Visible = false;
-                    c8.Visible = false;
-                    c9.Visible = false;
-
-
-            }
-
-            else if (rch == "Voiture Cabriolet")
-            {
-                c1.Visible = true;
-                c2.Visible = true;
-                c3.Visible = true;
-                c4.Visible = true;
-                c5.Visible = true;
-                c6.Visible = true;
-                c7.Visible = true;
-                c8.Visible = true;
-                c9.Visible = true;
-
-                    e1.Visible = false;
-                    e2.Visible = false;
-                    e3.Visible = false;
-                    e4.Visible = false;
-                    e5.Visible = false;
-                    e6.Visible = false;
-                    e7.Visible = false;
-                    e8.Visible = false;
-                    e9.Visible = false;
-
-                    l1.Visible = false;
-                    l2.Visible = false;
-                    l3.Visible = false;
-                    l4.Visible = false;
-                    l5.Visible = false;
-                    l6.Visible = false;
-                    l7.Visible = false;
-                    l8.Visible = false;
-                    l9.Visible = false;
+                rd.Read();
+               
+                txtmt.Text = rd[1].ToString();
+                txtmr.Text = rd[2].ToString();
+                txtmd.Text = rd[3].ToString();
+                txttv.Text = rd[4].ToString();
+                txttc.Text = rd[5].ToString();
+                txtp.Text =  rd[6].ToString();
+                lb_ass.Text =rd[7].ToString();
+                lb_cg.Text = rd[8].ToString();
+                lb_lv.Text = rd[9].ToString();
+                lb_v.Text =  rd[10].ToString();
+                voiture_pb.Load(Application.StartupPath + "/img_voiture/" + lb_v.Text);
+                assur.Load(Application.StartupPath + "/img_voiture/" + lb_ass.Text);
+                carte_grise.Load(Application.StartupPath + "/img_voiture/" + lb_cg.Text);
+                la_visite.Load(Application.StartupPath + "/img_voiture/" + lb_lv.Text);
                
             }
-            else if (rch == "Voiture Économique")
+            else
             {
-                e1.Visible = true;
-                e2.Visible = true;
-                e3.Visible = true;
-                e4.Visible = true;
-                e5.Visible = true;
-                e6.Visible = true;
-                e7.Visible = true;
-                e8.Visible = true;
-                e9.Visible = true;
-
-                    c1.Visible = false;
-                    c2.Visible = false;
-                    c3.Visible = false;
-                    c4.Visible = false;
-                    c5.Visible = false;
-                    c6.Visible = false;
-                    c7.Visible = false;
-                    c8.Visible = false;
-                    c9.Visible = false;
-
-                    l1.Visible = false;
-                    l2.Visible = false;
-                    l3.Visible = false;
-                    l4.Visible = false;
-                    l5.Visible = false;
-                    l6.Visible = false;
-                    l7.Visible = false;
-                    l8.Visible = false;
-                    l9.Visible = false;
-                
+                MessageBox.Show("N°Voiture " + ncr + " Introuvable ", "Gestion Location Voiture");
             }
+            rd.Close();
 
 
-
-            }
+        }
 
         private void precedentGV_Click(object sender, EventArgs e)
         {
@@ -157,6 +84,30 @@ namespace Gestion_Location_Voiture
         private void e1_MouseHover(object sender, EventArgs e)
         {
 
+        }
+
+        private void voiture_Load(object sender, EventArgs e)
+        {
+            connection = new SqlConnection(cnx);
+            connection.Open();
+            remplir();
+        }
+        private void remplir()
+        {
+            //initializez l'adapteur de donnée et le datatable
+            dataAdapter = new SqlDataAdapter("select matricule,marque,model,type_voiture,type_carburant,prix from voitures ", cnx);
+            dt = new DataTable();
+            //remplissez le datatable avec less donnes
+            dataAdapter.Fill(dt);
+            //liez le datatable au tableau
+            tableaux.DataSource = dt;
+        }
+
+        private void precedentGC_Click(object sender, EventArgs e)
+        {
+            menu menu= new menu();
+            menu.Show();
+            this.Hide();
         }
     }
 }

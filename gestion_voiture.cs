@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -20,6 +21,8 @@ namespace Gestion_Location_Voiture
         SqlConnection connection;
         SqlDataReader rd;
         OpenFileDialog ofd = new OpenFileDialog();
+        private SqlDataAdapter dataAdapter;
+        private DataTable dt;
         string chemin = "";
         
         public gestion_voiture()
@@ -31,18 +34,10 @@ namespace Gestion_Location_Voiture
         {
             connection = new SqlConnection(cnx);
             connection.Open();
+            remplir();
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            //string imgas;
-            /*OpenFileDialog ofdas = new OpenFileDialog();
-            ofdas.Filter = "JPG files(*.jpg)|*.jpg|PNG files(*.png)|*.png | all files(*.*)|*.*";
-            ofdas.ShowDialog();
-            imgas = ofdas.FileName.ToString();
-            assur.ImageLocation = imgas;*/
-
-            //string chemin = "";
-            //OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "JPG files(*.jpg)|*.jpg|PNG files(*.png)|*.png | all files(*.*)|*.*";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
@@ -50,8 +45,8 @@ namespace Gestion_Location_Voiture
                 Image img = Image.FromFile(ofd.FileName);
                 string typeFile = Path.GetExtension(ofd.FileName);
                 assur.Image = img;
-                chemin = txtmt.Text + " assurance"+ typeFile;
-                lb_ass.Text = chemin;
+                lb_ass.Text = $"{DateTime.Now:yyyy_MM_dd HH-mm-ss}  MATRICUL-" + txtmt.Text + " Photo voiture" + typeFile;
+                chemin = lb_ass.Text;
                 File.Copy(fileinfo.FullName, Application.StartupPath + "/img_voiture/" + chemin);
             }
 
@@ -59,15 +54,6 @@ namespace Gestion_Location_Voiture
 
             private void button6_Click(object sender, EventArgs e)
         {
-            //string imgcg;
-            /*OpenFileDialog ofdcg = new OpenFileDialog();
-            ofdcg.Filter = "JPG files(*.jpg)|*.jpg|PNG files(*.png)|*.png | all files(*.*)|*.*";
-            ofdcg.ShowDialog();
-            imgcg = ofdcg.FileName.ToString();
-            carte_grise.ImageLocation = imgcg;*/
-
-            //string chemin = "";
-            //OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "JPG files(*.jpg)|*.jpg|PNG files(*.png)|*.png | all files(*.*)|*.*";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
@@ -75,23 +61,14 @@ namespace Gestion_Location_Voiture
                 Image img = Image.FromFile(ofd.FileName);
                 string typeFile = Path.GetExtension(ofd.FileName);
                 carte_grise.Image = img;
-                chemin = txtmt.Text + " carte grise"+typeFile;
-                 lb_cg.Text= chemin;
+                lb_cg.Text = $"{DateTime.Now:yyyy_MM_dd HH-mm-ss} MATRICUL-" + txtmt.Text + " carte grise" + typeFile;
+                chemin = lb_cg.Text;
                 File.Copy(fileinfo.FullName, Application.StartupPath + "/img_voiture/" + chemin);
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //string imgVt;
-            /*OpenFileDialog ofdvt = new OpenFileDialog();
-            ofdvt.Filter = "JPG files(*.jpg)|*.jpg|PNG files(*.png)|*.png | all files(*.*)|*.*";
-            ofdvt.ShowDialog();
-            imgvt = ofdvt.FileName.ToString();
-            voiture.ImageLocation = imgvt;*/
-
-           // string chemin = "";
-            //OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "JPG files(*.jpg)|*.jpg|PNG files(*.png)|*.png | all files(*.*)|*.*";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
@@ -99,24 +76,17 @@ namespace Gestion_Location_Voiture
                 Image img = Image.FromFile(ofd.FileName);
                 string typeFile = Path.GetExtension(ofd.FileName);
                 voiture.Image = img;
-                chemin = txtmt.Text + " photo voiture" +typeFile;
-                lb_v.Text = chemin;
+                lb_v.Text = $"{DateTime.Now:yyyy_MM_dd HH-mm-ss} MATRICUL-" + txtmt.Text + " Photo voiture" + typeFile;
+                chemin = lb_v.Text;
+                //chemin =txtmt.Text + " Photo voiture" : typeFile;
                 File.Copy(fileinfo.FullName, Application.StartupPath + "/img_voiture/" + chemin);
+                
             }
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //string imglv;
-           /* OpenFileDialog ofdlv = new OpenFileDialog();
-            ofdlv.Filter = "JPG files(*.jpg)|*.jpg|PNG files(*.png)|*.png | all files(*.*)|*.*";
-            ofdlv.ShowDialog();
-            imglv = ofdlv.FileName.ToString();
-            la_visite.ImageLocation = imglv;*/
-
-           // string chemin = "";
-            //OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "JPG files(*.jpg)|*.jpg|PNG files(*.png)|*.png | all files(*.*)|*.*";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
@@ -124,13 +94,23 @@ namespace Gestion_Location_Voiture
                 Image img = Image.FromFile(ofd.FileName);
                 string typeFile = Path.GetExtension(ofd.FileName);
                 la_visite.Image = img;
-                chemin = txtmt.Text + " la visite"+typeFile;
-                lb_lv.Text = chemin;
+                lb_lv.Text = $"{DateTime.Now:yyyy_MM_dd HH-mm-ss}  MATRICUL-" + txtmt.Text + " la visite" + typeFile;
+                chemin = lb_lv.Text;
                 File.Copy(fileinfo.FullName, Application.StartupPath + "/img_voiture/" + chemin);
             }
             
                 
 
+        }
+        private void remplir()
+        {
+            //initializez l'adapteur de donnée et le datatable
+            dataAdapter = new SqlDataAdapter("select matricule,marque,model,type_voiture,type_carburant,prix from voitures ", cnx);
+            dt = new DataTable();
+            //remplissez le datatable avec less donnes
+            dataAdapter.Fill(dt);
+            //liez le datatable au tableau
+            tableaux.DataSource = dt;
         }
 
         private void modifier_Click(object sender, EventArgs e)
@@ -145,8 +125,9 @@ namespace Gestion_Location_Voiture
                     MessageBox.Show("Modification effectuer", "Gestion Location Voiture");
                     //remplir();
                     nouveau();
+                    remplir();
                     modifier.Enabled = false;
-                    supprimer.Enabled = false;
+                   // supprimer.Enabled = false;
                     enregistrer.Enabled = true;
                 }
                 else
@@ -175,7 +156,7 @@ namespace Gestion_Location_Voiture
         private void supprimer_Click(object sender, EventArgs e)
         {
             //string ncr = Microsoft.VisualBasic.Interaction.InputBox("N°Matricule De Voiture Que Vous Voulez Supprimer", "Gestion Location Voiture");
-            if(MessageBox.Show("Voulez Vous Supprimer La Voiture N° '" + txtmt.Text + "'","Gestion location De Voiture",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+           /* if(MessageBox.Show("Voulez Vous Supprimer La Voiture N° '" + txtmt.Text + "'","Gestion location De Voiture",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
             {
             cmd = new SqlCommand("Delete from voitures where [matricule]='" + txtmt.Text + "'", connection);
             cmd.ExecuteNonQuery();
@@ -186,7 +167,7 @@ namespace Gestion_Location_Voiture
                 File.Delete(Application.StartupPath + "/img_voiture/" + lb_lv.Text);
                 File.Delete(Application.StartupPath + "/img_voiture/" + lb_v.Text);
             MessageBox.Show("Suppretion Effectuer"); 
-            }
+            }*/
             /*File.Delete(Application.StartupPath + "/img_voiture/" + lb_cg.Text);
             File.Delete(Application.StartupPath + "/img_voiture/" + lb_lv.Text);
             File.Delete(Application.StartupPath + "/img_voiture/" + lb_v.Text);*/
@@ -194,6 +175,10 @@ namespace Gestion_Location_Voiture
 
         private void enregistrer_Click(object sender, EventArgs e)
         {
+            if (txtmt.Text != "" && txtmr.Text != "" && txtmd.Text != "" && txttv.Text != "" && txttc.Text != "" && txtp.Text != "" &&  lb_ass.Text != "label10" && lb_cg.Text != "label9" && lb_lv.Text != "label8" && lb_v.Text != "label7")
+            {
+                
+            
             string req = "insert into voitures values (@matricule,@marque,@model,@type_voiture,@type_carburant,@prix,@imgas,@imgcg,@imglv,@imgvt)";
             cmd = new SqlCommand(req, connection);
             cmd.Parameters.AddWithValue("@matricule", txtmt.Text);
@@ -207,8 +192,14 @@ namespace Gestion_Location_Voiture
             cmd.Parameters.AddWithValue("@imglv", lb_lv.Text);
             cmd.Parameters.AddWithValue("@imgvt", lb_v.Text);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("bien ajouter");
+            MessageBox.Show("Votre Donner Et Bien Ajouter", "Gestion Location Voiture");
             nouveau();
+            remplir();
+            }
+            else
+            {
+                MessageBox.Show("Verifier Votre Donner", "Gestion Location Voiture");
+            }
 
         }
         private void textBox1_Click(object sender, EventArgs e)
@@ -244,7 +235,7 @@ namespace Gestion_Location_Voiture
                 carte_grise.Load(Application.StartupPath + "/img_voiture/" + lb_cg.Text);
                 la_visite.Load(Application.StartupPath + "/img_voiture/" + lb_lv.Text);
                 modifier.Enabled = true;
-                supprimer.Enabled = true;
+                //supprimer.Enabled = true;
                 enregistrer.Enabled = false;
             }
             else
@@ -259,6 +250,18 @@ namespace Gestion_Location_Voiture
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dt_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void precedentGC_Click(object sender, EventArgs e)
+        {
+            dashboard dashboard = new dashboard();
+            dashboard.Show();
+            this.Hide();
         }
     }
 }

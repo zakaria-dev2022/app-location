@@ -5,7 +5,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.HtmlControls;
@@ -20,6 +22,8 @@ namespace Gestion_Location_Voiture
         private SqlDataAdapter dataAdapter;
         SqlConnection Connection;
         SqlCommand cmd;
+        OpenFileDialog ofd = new OpenFileDialog();
+        string chemin = "";
         private DataTable dt;
         public client()
         {
@@ -35,25 +39,6 @@ namespace Gestion_Location_Voiture
             remplir();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-             if (txtn.Text != "" && txtp.Text != "" &&( txtnc.Text != "" || txtnpr.Text !="") && txtt.Text != "" && txtnp.Text != "" && txta.Text != "")
-             {
-            cmd = new SqlCommand("insert into client values('" + txtne.Text + "', '" + txtn.Text + "', '" + txtp.Text + "', '" + txtnc.Text + "','"+txtnpr.Text+"' ,'" + txtnp.Text + "','" + txtt.Text + "','" + txta.Text + "')", Connection);
-            cmd.ExecuteNonQuery();
-            remplir();
-            MessageBox.Show("Donner Enregistrer","Gestion Location Voiture");
-                nouveau();
-
-
-
-            }
-             else
-             {
-                 MessageBox.Show("Verifier Les Donners!!!", "Gestion Location Voiture");
-             }
-            
-        } 
         private void nouveau()
         {
             txtne.Text = "";
@@ -63,13 +48,15 @@ namespace Gestion_Location_Voiture
             txtt.Text = "";
             txtnp.Text = "";
             txta.Text = "";
-            txtnpr.Text = "";
+           // txtnpr.Text = "";
+            recto.Image = null;
+            verso.Image = null;
             txtn.Focus();
         }
         private void remplir()
         {
             //initializez l'adapteur de donnée et le datatable
-            dataAdapter = new SqlDataAdapter("select * from client ", cnx);
+            dataAdapter = new SqlDataAdapter(" select non_entreprise,nom,prenom,[cin/passport],permis,tel,adresse from client", cnx);
             dt = new DataTable();
             //remplissez le datatable avec less donnes
             dataAdapter.Fill(dt);
@@ -79,7 +66,7 @@ namespace Gestion_Location_Voiture
 
         private void supprimer_Click(object sender, EventArgs e)
         {
-           string ncr = Microsoft.VisualBasic.Interaction.InputBox("N°Client Que Vous Voulez Supprimer", "Gestion Location Voiture");
+          /* string ncr = Microsoft.VisualBasic.Interaction.InputBox("N°Client Que Vous Voulez Supprimer", "Gestion Location Voiture");
              cmd = new SqlCommand("select *from client where [client_id]='" + ncr + "'", Connection);
             SqlDataReader rd = cmd.ExecuteReader();
             if (rd.HasRows)
@@ -98,24 +85,60 @@ namespace Gestion_Location_Voiture
             {
                 MessageBox.Show("N°Client " + ncr + " Introuvable ", "Gestion Location Voiture");
             }
-            rd.Close();
+            rd.Close();*/
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            menu menu = new menu();
-            menu.Show();
+            connection connection = new connection();
+            connection.Show();
             this.Hide();
         }
-
-        private void modifier_Click(object sender, EventArgs e)
+        private void tableaux_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-                if (MessageBox.Show("Enregistrer La Modification ??", "Gestion Location Voiture", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+        }
+        private void rechercher_Click(object sender, EventArgs e)
+        {
+            string ncr = Microsoft.VisualBasic.Interaction.InputBox("N°CIN Ou N°Passport De CLient Que Vous Voulez Rechercher", "Gestion Location Voiture");
+            cmd = new SqlCommand("select *from client where [cin/passport]='" + ncr + "'", Connection);
+            SqlDataReader rd = cmd.ExecuteReader();
+            if (rd.HasRows)
+            {
+                
+                rd.Read();
+                txtid.Text = rd[0].ToString();
+                txtne.Text = rd[1].ToString();
+                txtn.Text = rd[2].ToString();
+                txtp.Text = rd[3].ToString();
+                txtnc.Text = rd[4].ToString();
+                //txtnpr.Text = rd[5].ToString();
+                txtnp.Text = rd[5].ToString();
+                txtt.Text = rd[6].ToString();
+                txta.Text = rd[7].ToString();
+                lb_recto.Text = rd[8].ToString();
+                lb_verso.Text = rd[9].ToString();
+                verso.Load(Application.StartupPath + "/img_client/" + lb_verso.Text);
+                recto.Load(Application.StartupPath + "/img_client/" + lb_recto.Text);
+                modifier.Enabled = true;
+                enregistrer.Enabled = false;
+
+            }
+            else
+            {
+                MessageBox.Show("N°Client " + ncr + " Introuvable ", "Gestion Location Voiture");
+            }
+                rd.Close();
+            
+        }
+
+        private void modifier_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Enregistrer La Modification ??", "Gestion Location Voiture", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (txtn.Text != "" && txtp.Text != "" &&  txtnc.Text != ""  && txtt.Text !="" && txtnp.Text != "" && txta.Text != "" && recto.Image != null && verso.Image != null)
                 {
-                if (txtn.Text != "" && txtp.Text != "" && txtnc.Text != "" && txtt.Text != "" && txtnp.Text != "" && txta.Text != "")
-                {
-                    SqlCommand cmd = new SqlCommand(" update client set [non_entreprise] = '" + txtne.Text + "',[nom] = '" + txtn.Text + "',[prenom] = '" + txtp.Text + "',[cin]='" + txtnc.Text + "',[passport]='" + txtnpr.Text + "',[permis]='" + txtnp.Text + "',[tel]='" + txtt.Text + "',[adresse]='" + txta.Text + "' where [client_id]='" + txtid.Text + "'", Connection);
+                    SqlCommand cmd = new SqlCommand(" update client set [non_entreprise] = '" + txtne.Text + "',[nom] = '" + txtn.Text + "',[prenom] = '" + txtp.Text + "',[cin/passport]='" + txtnc.Text + "',[permis]='" + txtnp.Text + "',[tel]='" + txtt.Text + "',[adresse]='" + txta.Text + "' where [client_id]='" + txtid.Text + "'", Connection);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Modification effectuer", "Gestion Location Voiture");
                     remplir();
@@ -130,36 +153,71 @@ namespace Gestion_Location_Voiture
 
 
             }
-        }       
+        }
 
-        private void rechercher_Click(object sender, EventArgs e)
+        private void enregistrer_Click(object sender, EventArgs e)
         {
-            string ncr = Microsoft.VisualBasic.Interaction.InputBox("N°Client Que Vous Voulez Rechercher", "Gestion Location Voiture");
-            cmd = new SqlCommand("select *from client where [client_id]='" + ncr + "'", Connection);
-            SqlDataReader rd = cmd.ExecuteReader();
-            if (rd.HasRows)
+            if (txtn.Text != "" && txtp.Text != "" && txtnc.Text != "" && txtnp.Text != "" && txtt.Text != "" && txta.Text != "" && recto.Image != null && verso.Image != null)
             {
-                rd.Read();
-                txtid.Text = rd[0].ToString();
-                txtne.Text = rd[1].ToString();
-                txtn.Text = rd[2].ToString();
-                txtp.Text = rd[3].ToString();
-                txtnc.Text = rd[4].ToString();
-                txtnpr.Text = rd[5].ToString();
-                txtnp.Text = rd[6].ToString();
-                txtt.Text = rd[7].ToString();
-                txta.Text = rd[8].ToString();
-                modifier.Enabled = true;
-                enregistrer.Enabled = false;
+
+
+                string req = "insert into client values (@non_entreprise,@nom,@prenom,@cin,@permis,@tel,@adresse,@carte_recto,@carte_verso)";
+                cmd = new SqlCommand(req, Connection);
+                cmd.Parameters.AddWithValue("@non_entreprise", txtne.Text);
+                cmd.Parameters.AddWithValue("@nom", txtn.Text);
+                cmd.Parameters.AddWithValue("@prenom", txtp.Text);
+                cmd.Parameters.AddWithValue("@cin", txtnc.Text);
+              //  cmd.Parameters.AddWithValue("@passport", txtnpr.Text);
+                cmd.Parameters.AddWithValue("@permis", txtnp.Text);
+                cmd.Parameters.AddWithValue("@tel", txtt.Text);
+                cmd.Parameters.AddWithValue("@adresse", txta.Text);
+                cmd.Parameters.AddWithValue("@carte_recto", lb_recto.Text);
+                cmd.Parameters.AddWithValue("@carte_verso", lb_verso.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Votre Donner Et Bien Ajouter", "Gestion Location Voiture");
+                nouveau();
+                remplir();
 
             }
             else
             {
-                MessageBox.Show("N°Client " + ncr + " Introuvable ", "Gestion Location Voiture");
+                MessageBox.Show("Verifier Votre Donner", "Gestion Location Voiture");
             }
-            rd.Close();
 
         }
 
+        private void btncr_Click(object sender, EventArgs e)
+        {
+            ofd.Filter = "JPG files(*.jpg)|*.jpg|PNG files(*.png)|*.png | all files(*.*)|*.*";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                var fileinfo = new FileInfo(ofd.FileName);
+                Image img = Image.FromFile(ofd.FileName);
+                string typeFile = Path.GetExtension(ofd.FileName);
+                recto.Image = img;
+                lb_recto.Text = $"{DateTime.Now:yyyy_MM_dd HH-mm-ss} CIN-" + txtnc.Text + " carte recto" + typeFile;
+                chemin = lb_recto.Text;
+                //chemin =txtmt.Text + " Photo voiture" : typeFile;
+                File.Copy(fileinfo.FullName, Application.StartupPath + "/img_client/" + chemin);
+
+            }
+        }
+
+        private void btncv_Click(object sender, EventArgs e)
+        {
+            ofd.Filter = "JPG files(*.jpg)|*.jpg|PNG files(*.png)|*.png | all files(*.*)|*.*";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                var fileinfo = new FileInfo(ofd.FileName);
+                Image img = Image.FromFile(ofd.FileName);
+                string typeFile = Path.GetExtension(ofd.FileName);
+                verso.Image = img;
+                lb_verso.Text = $"{DateTime.Now:yyyy_MM_dd HH-mm-ss} CIN-" + txtnc.Text + " carte verso" + typeFile;
+                chemin = lb_verso.Text;
+                //chemin =txtmt.Text + " Photo voiture" : typeFile;
+                File.Copy(fileinfo.FullName, Application.StartupPath + "/img_client/" + chemin);
+
+            }
+        }
     }
 }

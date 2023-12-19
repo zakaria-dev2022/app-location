@@ -32,14 +32,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtnu = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtmp = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.lb_logo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -80,15 +81,15 @@
             this.label1.Text = "Fermer";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // pictureBox1
+            // logo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(119, 109);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(317, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(160, 91);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(231, 127);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo.TabIndex = 2;
+            this.logo.TabStop = false;
             // 
             // label2
             // 
@@ -145,18 +146,29 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lb_logo
+            // 
+            this.lb_logo.AutoSize = true;
+            this.lb_logo.Location = new System.Drawing.Point(65, 130);
+            this.lb_logo.Name = "lb_logo";
+            this.lb_logo.Size = new System.Drawing.Size(68, 29);
+            this.lb_logo.TabIndex = 8;
+            this.lb_logo.Text = "label5";
+            this.lb_logo.Visible = false;
+            // 
             // connection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(520, 550);
+            this.Controls.Add(this.lb_logo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtmp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtnu);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.logo);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -167,7 +179,7 @@
             this.Load += new System.EventHandler(this.connection_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,12 +188,13 @@
         #endregion
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnu;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtmp;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_logo;
     }
 }

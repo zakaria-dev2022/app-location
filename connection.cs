@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Logging;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,7 @@ namespace Gestion_Location_Voiture
         SqlConnection Connection;
         SqlCommand cmd;
         private DataTable dt;
+        SqlDataReader rd;
         public connection()
         {
             InitializeComponent();
@@ -108,6 +110,20 @@ namespace Gestion_Location_Voiture
         {
             Connection = new SqlConnection(cnx);
             Connection.Open();
+            remplir();
         }
+    private void remplir()
+    {
+        cmd = new SqlCommand("select *from parametre where [id]= 1 ", Connection);
+        rd = cmd.ExecuteReader();
+        if (rd.HasRows)
+        {
+            rd.Read();
+            lb_logo.Text = rd[2].ToString();
+            logo.Load(Application.StartupPath + "/img_logo/" + lb_logo.Text);
+        }
+        rd.Close();
     }
+
+}
 }
