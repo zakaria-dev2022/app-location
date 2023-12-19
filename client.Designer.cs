@@ -44,17 +44,22 @@
             this.tableaux = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.txtnp = new System.Windows.Forms.TextBox();
-            this.enregistrer = new Guna.UI2.WinForms.Guna2Button();
-            this.modifier = new Guna.UI2.WinForms.Guna2Button();
-            this.supprimer = new Guna.UI2.WinForms.Guna2Button();
             this.txta = new System.Windows.Forms.TextBox();
             this.txtt = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.rechercher = new Guna.UI2.WinForms.Guna2Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtnpr = new System.Windows.Forms.TextBox();
+            this.rechercher = new System.Windows.Forms.Button();
+            this.modifier = new System.Windows.Forms.Button();
+            this.enregistrer = new System.Windows.Forms.Button();
+            this.btncv = new System.Windows.Forms.Button();
+            this.btncr = new System.Windows.Forms.Button();
+            this.lb_recto = new System.Windows.Forms.Label();
+            this.recto = new System.Windows.Forms.PictureBox();
+            this.lb_verso = new System.Windows.Forms.Label();
+            this.verso = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableaux)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verso)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -104,28 +109,28 @@
             // 
             // txtne
             // 
-            this.txtne.Location = new System.Drawing.Point(76, 159);
+            this.txtne.Location = new System.Drawing.Point(269, 125);
             this.txtne.Name = "txtne";
             this.txtne.Size = new System.Drawing.Size(182, 26);
             this.txtne.TabIndex = 1;
             // 
             // txtn
             // 
-            this.txtn.Location = new System.Drawing.Point(334, 159);
+            this.txtn.Location = new System.Drawing.Point(270, 166);
             this.txtn.Name = "txtn";
             this.txtn.Size = new System.Drawing.Size(182, 26);
             this.txtn.TabIndex = 2;
             // 
             // txtp
             // 
-            this.txtp.Location = new System.Drawing.Point(676, 159);
+            this.txtp.Location = new System.Drawing.Point(269, 209);
             this.txtp.Name = "txtp";
             this.txtp.Size = new System.Drawing.Size(182, 26);
             this.txtp.TabIndex = 3;
             // 
             // txtnc
             // 
-            this.txtnc.Location = new System.Drawing.Point(943, 159);
+            this.txtnc.Location = new System.Drawing.Point(269, 251);
             this.txtnc.Name = "txtnc";
             this.txtnc.Size = new System.Drawing.Size(182, 26);
             this.txtnc.TabIndex = 4;
@@ -134,8 +139,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(82, 118);
+            this.label2.ForeColor = System.Drawing.Color.Teal;
+            this.label2.Location = new System.Drawing.Point(47, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 29);
             this.label2.TabIndex = 5;
@@ -145,8 +150,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(356, 118);
+            this.label4.ForeColor = System.Drawing.Color.Teal;
+            this.label4.Location = new System.Drawing.Point(47, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 29);
             this.label4.TabIndex = 6;
@@ -156,19 +161,19 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(956, 118);
+            this.label5.ForeColor = System.Drawing.Color.Teal;
+            this.label5.Location = new System.Drawing.Point(47, 247);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 29);
+            this.label5.Size = new System.Drawing.Size(209, 29);
             this.label5.TabIndex = 7;
-            this.label5.Text = "N° C.I.N";
+            this.label5.Text = "N° C.I.N / N°Passport";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(730, 208);
+            this.label6.ForeColor = System.Drawing.Color.Teal;
+            this.label6.Location = new System.Drawing.Point(47, 330);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 29);
             this.label6.TabIndex = 8;
@@ -178,8 +183,8 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(691, 118);
+            this.label9.ForeColor = System.Drawing.Color.Teal;
+            this.label9.Location = new System.Drawing.Point(47, 208);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 29);
             this.label9.TabIndex = 13;
@@ -190,19 +195,20 @@
             this.tableaux.BackgroundColor = System.Drawing.Color.White;
             this.tableaux.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tableaux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableaux.Location = new System.Drawing.Point(45, 397);
+            this.tableaux.Location = new System.Drawing.Point(12, 504);
             this.tableaux.Name = "tableaux";
             this.tableaux.RowHeadersWidth = 62;
             this.tableaux.RowTemplate.Height = 28;
-            this.tableaux.Size = new System.Drawing.Size(1108, 289);
+            this.tableaux.Size = new System.Drawing.Size(1156, 205);
             this.tableaux.TabIndex = 15;
+            this.tableaux.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableaux_CellContentClick);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(382, 208);
+            this.label7.ForeColor = System.Drawing.Color.Teal;
+            this.label7.Location = new System.Drawing.Point(45, 288);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 29);
             this.label7.TabIndex = 17;
@@ -210,74 +216,23 @@
             // 
             // txtnp
             // 
-            this.txtnp.Location = new System.Drawing.Point(340, 250);
+            this.txtnp.Location = new System.Drawing.Point(269, 293);
             this.txtnp.Name = "txtnp";
             this.txtnp.Size = new System.Drawing.Size(182, 26);
-            this.txtnp.TabIndex = 6;
+            this.txtnp.TabIndex = 5;
             this.txtnp.Tag = "";
-            // 
-            // enregistrer
-            // 
-            this.enregistrer.BorderRadius = 18;
-            this.enregistrer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.enregistrer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.enregistrer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.enregistrer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.enregistrer.FillColor = System.Drawing.Color.Teal;
-            this.enregistrer.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enregistrer.ForeColor = System.Drawing.Color.White;
-            this.enregistrer.Location = new System.Drawing.Point(649, 315);
-            this.enregistrer.Name = "enregistrer";
-            this.enregistrer.Size = new System.Drawing.Size(180, 45);
-            this.enregistrer.TabIndex = 9;
-            this.enregistrer.Text = "Enregistrer";
-            this.enregistrer.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // modifier
-            // 
-            this.modifier.BorderRadius = 18;
-            this.modifier.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.modifier.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.modifier.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.modifier.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.modifier.Enabled = false;
-            this.modifier.FillColor = System.Drawing.Color.Teal;
-            this.modifier.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifier.ForeColor = System.Drawing.Color.White;
-            this.modifier.Location = new System.Drawing.Point(361, 315);
-            this.modifier.Name = "modifier";
-            this.modifier.Size = new System.Drawing.Size(180, 45);
-            this.modifier.TabIndex = 19;
-            this.modifier.Text = "Modifier";
-            this.modifier.Click += new System.EventHandler(this.modifier_Click);
-            // 
-            // supprimer
-            // 
-            this.supprimer.BorderRadius = 18;
-            this.supprimer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.supprimer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.supprimer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.supprimer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.supprimer.FillColor = System.Drawing.Color.Teal;
-            this.supprimer.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.supprimer.ForeColor = System.Drawing.Color.White;
-            this.supprimer.Location = new System.Drawing.Point(896, 315);
-            this.supprimer.Name = "supprimer";
-            this.supprimer.Size = new System.Drawing.Size(180, 45);
-            this.supprimer.TabIndex = 20;
-            this.supprimer.Text = "Supprimer";
-            this.supprimer.Click += new System.EventHandler(this.supprimer_Click);
             // 
             // txta
             // 
-            this.txta.Location = new System.Drawing.Point(943, 250);
+            this.txta.Location = new System.Drawing.Point(269, 374);
+            this.txta.Multiline = true;
             this.txta.Name = "txta";
             this.txta.Size = new System.Drawing.Size(182, 26);
             this.txta.TabIndex = 8;
             // 
             // txtt
             // 
-            this.txtt.Location = new System.Drawing.Point(676, 250);
+            this.txtt.Location = new System.Drawing.Point(269, 334);
             this.txtt.Mask = "00 00 00 00 00";
             this.txtt.Name = "txtt";
             this.txtt.Size = new System.Drawing.Size(182, 26);
@@ -288,8 +243,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(985, 208);
+            this.label3.ForeColor = System.Drawing.Color.Teal;
+            this.label3.Location = new System.Drawing.Point(47, 373);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 29);
             this.label3.TabIndex = 24;
@@ -297,53 +252,133 @@
             // 
             // rechercher
             // 
-            this.rechercher.BorderRadius = 18;
-            this.rechercher.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.rechercher.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.rechercher.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.rechercher.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.rechercher.FillColor = System.Drawing.Color.Teal;
-            this.rechercher.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rechercher.BackColor = System.Drawing.Color.Teal;
+            this.rechercher.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rechercher.ForeColor = System.Drawing.Color.White;
-            this.rechercher.Location = new System.Drawing.Point(104, 315);
+            this.rechercher.Location = new System.Drawing.Point(464, 432);
+            this.rechercher.Margin = new System.Windows.Forms.Padding(4);
             this.rechercher.Name = "rechercher";
-            this.rechercher.Size = new System.Drawing.Size(180, 45);
-            this.rechercher.TabIndex = 25;
-            this.rechercher.Text = "rechercher";
+            this.rechercher.Size = new System.Drawing.Size(194, 44);
+            this.rechercher.TabIndex = 29;
+            this.rechercher.Text = "Rechercher";
+            this.rechercher.UseVisualStyleBackColor = false;
             this.rechercher.Click += new System.EventHandler(this.rechercher_Click);
             // 
-            // label8
+            // modifier
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label8.Location = new System.Drawing.Point(82, 208);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 29);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "N° Passport";
+            this.modifier.BackColor = System.Drawing.Color.Teal;
+            this.modifier.Enabled = false;
+            this.modifier.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifier.ForeColor = System.Drawing.Color.White;
+            this.modifier.Location = new System.Drawing.Point(705, 432);
+            this.modifier.Margin = new System.Windows.Forms.Padding(4);
+            this.modifier.Name = "modifier";
+            this.modifier.Size = new System.Drawing.Size(194, 44);
+            this.modifier.TabIndex = 30;
+            this.modifier.Text = "Modifier";
+            this.modifier.UseVisualStyleBackColor = false;
+            this.modifier.Click += new System.EventHandler(this.modifier_Click_1);
             // 
-            // txtnpr
+            // enregistrer
             // 
-            this.txtnpr.Location = new System.Drawing.Point(76, 250);
-            this.txtnpr.Name = "txtnpr";
-            this.txtnpr.Size = new System.Drawing.Size(182, 26);
-            this.txtnpr.TabIndex = 5;
+            this.enregistrer.BackColor = System.Drawing.Color.Teal;
+            this.enregistrer.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enregistrer.ForeColor = System.Drawing.Color.White;
+            this.enregistrer.Location = new System.Drawing.Point(945, 432);
+            this.enregistrer.Margin = new System.Windows.Forms.Padding(4);
+            this.enregistrer.Name = "enregistrer";
+            this.enregistrer.Size = new System.Drawing.Size(194, 44);
+            this.enregistrer.TabIndex = 31;
+            this.enregistrer.Text = "Enregistrer";
+            this.enregistrer.UseVisualStyleBackColor = false;
+            this.enregistrer.Click += new System.EventHandler(this.enregistrer_Click);
+            // 
+            // btncv
+            // 
+            this.btncv.BackColor = System.Drawing.Color.Teal;
+            this.btncv.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncv.ForeColor = System.Drawing.Color.White;
+            this.btncv.Location = new System.Drawing.Point(945, 292);
+            this.btncv.Margin = new System.Windows.Forms.Padding(4);
+            this.btncv.Name = "btncv";
+            this.btncv.Size = new System.Drawing.Size(145, 44);
+            this.btncv.TabIndex = 32;
+            this.btncv.Text = "Carte Verso";
+            this.btncv.UseVisualStyleBackColor = false;
+            this.btncv.Click += new System.EventHandler(this.btncv_Click);
+            // 
+            // btncr
+            // 
+            this.btncr.BackColor = System.Drawing.Color.Teal;
+            this.btncr.Font = new System.Drawing.Font("Arial", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncr.ForeColor = System.Drawing.Color.White;
+            this.btncr.Location = new System.Drawing.Point(550, 295);
+            this.btncr.Margin = new System.Windows.Forms.Padding(4);
+            this.btncr.Name = "btncr";
+            this.btncr.Size = new System.Drawing.Size(147, 44);
+            this.btncr.TabIndex = 33;
+            this.btncr.Text = "Carte Recto";
+            this.btncr.UseVisualStyleBackColor = false;
+            this.btncr.Click += new System.EventHandler(this.btncr_Click);
+            // 
+            // lb_recto
+            // 
+            this.lb_recto.AutoSize = true;
+            this.lb_recto.Location = new System.Drawing.Point(585, 103);
+            this.lb_recto.Name = "lb_recto";
+            this.lb_recto.Size = new System.Drawing.Size(51, 20);
+            this.lb_recto.TabIndex = 78;
+            this.lb_recto.Text = "label7";
+            this.lb_recto.Visible = false;
+            // 
+            // recto
+            // 
+            this.recto.Location = new System.Drawing.Point(475, 127);
+            this.recto.Margin = new System.Windows.Forms.Padding(4);
+            this.recto.Name = "recto";
+            this.recto.Size = new System.Drawing.Size(299, 155);
+            this.recto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.recto.TabIndex = 77;
+            this.recto.TabStop = false;
+            // 
+            // lb_verso
+            // 
+            this.lb_verso.AutoSize = true;
+            this.lb_verso.Location = new System.Drawing.Point(1027, 103);
+            this.lb_verso.Name = "lb_verso";
+            this.lb_verso.Size = new System.Drawing.Size(51, 20);
+            this.lb_verso.TabIndex = 80;
+            this.lb_verso.Text = "label7";
+            this.lb_verso.Visible = false;
+            // 
+            // verso
+            // 
+            this.verso.Location = new System.Drawing.Point(869, 127);
+            this.verso.Margin = new System.Windows.Forms.Padding(4);
+            this.verso.Name = "verso";
+            this.verso.Size = new System.Drawing.Size(299, 155);
+            this.verso.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.verso.TabIndex = 79;
+            this.verso.TabStop = false;
             // 
             // client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1181, 732);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtnpr);
+            this.Controls.Add(this.lb_verso);
+            this.Controls.Add(this.verso);
+            this.Controls.Add(this.lb_recto);
+            this.Controls.Add(this.recto);
+            this.Controls.Add(this.btncr);
+            this.Controls.Add(this.btncv);
+            this.Controls.Add(this.enregistrer);
+            this.Controls.Add(this.modifier);
             this.Controls.Add(this.rechercher);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtt);
             this.Controls.Add(this.txta);
-            this.Controls.Add(this.supprimer);
-            this.Controls.Add(this.modifier);
-            this.Controls.Add(this.enregistrer);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtnp);
             this.Controls.Add(this.tableaux);
@@ -365,6 +400,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableaux)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,15 +424,18 @@
         private System.Windows.Forms.DataGridView tableaux;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtnp;
-        private Guna.UI2.WinForms.Guna2Button enregistrer;
-        private Guna.UI2.WinForms.Guna2Button modifier;
-        private Guna.UI2.WinForms.Guna2Button supprimer;
         private System.Windows.Forms.TextBox txta;
         private System.Windows.Forms.MaskedTextBox txtt;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Button rechercher;
         private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtnpr;
+        private System.Windows.Forms.Button rechercher;
+        private System.Windows.Forms.Button modifier;
+        private System.Windows.Forms.Button enregistrer;
+        private System.Windows.Forms.Button btncv;
+        private System.Windows.Forms.Button btncr;
+        private System.Windows.Forms.Label lb_recto;
+        private System.Windows.Forms.PictureBox recto;
+        private System.Windows.Forms.Label lb_verso;
+        private System.Windows.Forms.PictureBox verso;
     }
 }

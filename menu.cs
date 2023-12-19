@@ -59,5 +59,19 @@ namespace Gestion_Location_Voiture
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            location location = new location();
+            location.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            location location = new location();
+            location.Show();
+            this.Hide();
+        }
     }
 }

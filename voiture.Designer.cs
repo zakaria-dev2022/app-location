@@ -29,312 +29,278 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(voiture));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.e8 = new System.Windows.Forms.PictureBox();
-            this.e7 = new System.Windows.Forms.PictureBox();
-            this.e4 = new System.Windows.Forms.PictureBox();
-            this.e5 = new System.Windows.Forms.PictureBox();
-            this.e9 = new System.Windows.Forms.PictureBox();
-            this.e6 = new System.Windows.Forms.PictureBox();
-            this.e3 = new System.Windows.Forms.PictureBox();
-            this.e2 = new System.Windows.Forms.PictureBox();
-            this.e1 = new System.Windows.Forms.PictureBox();
-            this.c9 = new System.Windows.Forms.PictureBox();
-            this.c8 = new System.Windows.Forms.PictureBox();
-            this.c7 = new System.Windows.Forms.PictureBox();
-            this.c6 = new System.Windows.Forms.PictureBox();
-            this.c5 = new System.Windows.Forms.PictureBox();
-            this.c4 = new System.Windows.Forms.PictureBox();
-            this.c3 = new System.Windows.Forms.PictureBox();
-            this.c2 = new System.Windows.Forms.PictureBox();
-            this.c1 = new System.Windows.Forms.PictureBox();
+            this.lb_ass = new System.Windows.Forms.Label();
+            this.lb_cg = new System.Windows.Forms.Label();
+            this.lb_lv = new System.Windows.Forms.Label();
+            this.lb_v = new System.Windows.Forms.Label();
+            this.txtmd = new System.Windows.Forms.TextBox();
+            this.assur = new System.Windows.Forms.PictureBox();
+            this.voiture_pb = new System.Windows.Forms.PictureBox();
+            this.la_visite = new System.Windows.Forms.PictureBox();
+            this.carte_grise = new System.Windows.Forms.PictureBox();
+            this.txtmr = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtmt = new System.Windows.Forms.TextBox();
+            this.txtp = new System.Windows.Forms.TextBox();
+            this.tableaux = new System.Windows.Forms.DataGridView();
             this.rechercher = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbtype = new System.Windows.Forms.ComboBox();
-            this.l9 = new System.Windows.Forms.PictureBox();
-            this.l2 = new System.Windows.Forms.PictureBox();
-            this.l1 = new System.Windows.Forms.PictureBox();
-            this.l6 = new System.Windows.Forms.PictureBox();
-            this.l3 = new System.Windows.Forms.PictureBox();
-            this.l8 = new System.Windows.Forms.PictureBox();
-            this.l5 = new System.Windows.Forms.PictureBox();
-            this.l7 = new System.Windows.Forms.PictureBox();
-            this.l4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.precedentGV = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.txttv = new System.Windows.Forms.TextBox();
+            this.txttc = new System.Windows.Forms.TextBox();
+            this.precedentGC = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.e8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voiture_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.la_visite)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carte_grise)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableaux)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.e8);
-            this.panel1.Controls.Add(this.e7);
-            this.panel1.Controls.Add(this.e4);
-            this.panel1.Controls.Add(this.e5);
-            this.panel1.Controls.Add(this.e9);
-            this.panel1.Controls.Add(this.e6);
-            this.panel1.Controls.Add(this.e3);
-            this.panel1.Controls.Add(this.e2);
-            this.panel1.Controls.Add(this.e1);
-            this.panel1.Controls.Add(this.c9);
-            this.panel1.Controls.Add(this.c8);
-            this.panel1.Controls.Add(this.c7);
-            this.panel1.Controls.Add(this.c6);
-            this.panel1.Controls.Add(this.c5);
-            this.panel1.Controls.Add(this.c4);
-            this.panel1.Controls.Add(this.c3);
-            this.panel1.Controls.Add(this.c2);
-            this.panel1.Controls.Add(this.c1);
+            this.panel1.Controls.Add(this.txttc);
+            this.panel1.Controls.Add(this.txttv);
+            this.panel1.Controls.Add(this.lb_ass);
+            this.panel1.Controls.Add(this.lb_cg);
+            this.panel1.Controls.Add(this.lb_lv);
+            this.panel1.Controls.Add(this.lb_v);
+            this.panel1.Controls.Add(this.txtmd);
+            this.panel1.Controls.Add(this.assur);
+            this.panel1.Controls.Add(this.voiture_pb);
+            this.panel1.Controls.Add(this.la_visite);
+            this.panel1.Controls.Add(this.carte_grise);
+            this.panel1.Controls.Add(this.txtmr);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.txtmt);
+            this.panel1.Controls.Add(this.txtp);
+            this.panel1.Controls.Add(this.tableaux);
             this.panel1.Controls.Add(this.rechercher);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.cbtype);
-            this.panel1.Controls.Add(this.l9);
-            this.panel1.Controls.Add(this.l2);
-            this.panel1.Controls.Add(this.l1);
-            this.panel1.Controls.Add(this.l6);
-            this.panel1.Controls.Add(this.l3);
-            this.panel1.Controls.Add(this.l8);
-            this.panel1.Controls.Add(this.l5);
-            this.panel1.Controls.Add(this.l7);
-            this.panel1.Controls.Add(this.l4);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1250, 732);
+            this.panel1.Size = new System.Drawing.Size(1055, 732);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // e8
+            // lb_ass
             // 
-            this.e8.Image = ((System.Drawing.Image)(resources.GetObject("e8.Image")));
-            this.e8.Location = new System.Drawing.Point(507, 557);
-            this.e8.Name = "e8";
-            this.e8.Size = new System.Drawing.Size(258, 141);
-            this.e8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e8.TabIndex = 33;
-            this.e8.TabStop = false;
-            this.e8.Visible = false;
+            this.lb_ass.AutoSize = true;
+            this.lb_ass.Location = new System.Drawing.Point(856, 440);
+            this.lb_ass.Name = "lb_ass";
+            this.lb_ass.Size = new System.Drawing.Size(60, 20);
+            this.lb_ass.TabIndex = 104;
+            this.lb_ass.Text = "label10";
+            this.lb_ass.Visible = false;
             // 
-            // e7
+            // lb_cg
             // 
-            this.e7.Image = ((System.Drawing.Image)(resources.GetObject("e7.Image")));
-            this.e7.Location = new System.Drawing.Point(143, 557);
-            this.e7.Name = "e7";
-            this.e7.Size = new System.Drawing.Size(258, 141);
-            this.e7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e7.TabIndex = 32;
-            this.e7.TabStop = false;
-            this.e7.Visible = false;
+            this.lb_cg.AutoSize = true;
+            this.lb_cg.Location = new System.Drawing.Point(856, 261);
+            this.lb_cg.Name = "lb_cg";
+            this.lb_cg.Size = new System.Drawing.Size(51, 20);
+            this.lb_cg.TabIndex = 103;
+            this.lb_cg.Text = "label9";
+            this.lb_cg.Visible = false;
             // 
-            // e4
+            // lb_lv
             // 
-            this.e4.Image = ((System.Drawing.Image)(resources.GetObject("e4.Image")));
-            this.e4.Location = new System.Drawing.Point(143, 393);
-            this.e4.Name = "e4";
-            this.e4.Size = new System.Drawing.Size(258, 141);
-            this.e4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e4.TabIndex = 31;
-            this.e4.TabStop = false;
-            this.e4.Visible = false;
+            this.lb_lv.AutoSize = true;
+            this.lb_lv.Location = new System.Drawing.Point(536, 440);
+            this.lb_lv.Name = "lb_lv";
+            this.lb_lv.Size = new System.Drawing.Size(51, 20);
+            this.lb_lv.TabIndex = 102;
+            this.lb_lv.Text = "label8";
+            this.lb_lv.Visible = false;
             // 
-            // e5
+            // lb_v
             // 
-            this.e5.Image = ((System.Drawing.Image)(resources.GetObject("e5.Image")));
-            this.e5.Location = new System.Drawing.Point(507, 393);
-            this.e5.Name = "e5";
-            this.e5.Size = new System.Drawing.Size(258, 141);
-            this.e5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e5.TabIndex = 30;
-            this.e5.TabStop = false;
-            this.e5.Visible = false;
+            this.lb_v.AutoSize = true;
+            this.lb_v.Location = new System.Drawing.Point(536, 261);
+            this.lb_v.Name = "lb_v";
+            this.lb_v.Size = new System.Drawing.Size(51, 20);
+            this.lb_v.TabIndex = 101;
+            this.lb_v.Text = "label7";
+            this.lb_v.Visible = false;
             // 
-            // e9
+            // txtmd
             // 
-            this.e9.Image = ((System.Drawing.Image)(resources.GetObject("e9.Image")));
-            this.e9.Location = new System.Drawing.Point(896, 557);
-            this.e9.Name = "e9";
-            this.e9.Size = new System.Drawing.Size(258, 141);
-            this.e9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e9.TabIndex = 29;
-            this.e9.TabStop = false;
-            this.e9.Visible = false;
+            this.txtmd.BackColor = System.Drawing.Color.White;
+            this.txtmd.Location = new System.Drawing.Point(224, 223);
+            this.txtmd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtmd.Name = "txtmd";
+            this.txtmd.ReadOnly = true;
+            this.txtmd.Size = new System.Drawing.Size(190, 26);
+            this.txtmd.TabIndex = 80;
             // 
-            // e6
+            // assur
             // 
-            this.e6.Image = ((System.Drawing.Image)(resources.GetObject("e6.Image")));
-            this.e6.Location = new System.Drawing.Point(896, 393);
-            this.e6.Name = "e6";
-            this.e6.Size = new System.Drawing.Size(258, 141);
-            this.e6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e6.TabIndex = 28;
-            this.e6.TabStop = false;
-            this.e6.Visible = false;
+            this.assur.Location = new System.Drawing.Point(754, 289);
+            this.assur.Margin = new System.Windows.Forms.Padding(4);
+            this.assur.Name = "assur";
+            this.assur.Size = new System.Drawing.Size(251, 134);
+            this.assur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.assur.TabIndex = 90;
+            this.assur.TabStop = false;
             // 
-            // e3
+            // voiture_pb
             // 
-            this.e3.Image = ((System.Drawing.Image)(resources.GetObject("e3.Image")));
-            this.e3.Location = new System.Drawing.Point(896, 228);
-            this.e3.Name = "e3";
-            this.e3.Size = new System.Drawing.Size(258, 141);
-            this.e3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e3.TabIndex = 27;
-            this.e3.TabStop = false;
-            this.e3.Visible = false;
+            this.voiture_pb.Location = new System.Drawing.Point(459, 114);
+            this.voiture_pb.Margin = new System.Windows.Forms.Padding(4);
+            this.voiture_pb.Name = "voiture_pb";
+            this.voiture_pb.Size = new System.Drawing.Size(251, 135);
+            this.voiture_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.voiture_pb.TabIndex = 92;
+            this.voiture_pb.TabStop = false;
             // 
-            // e2
+            // la_visite
             // 
-            this.e2.Image = ((System.Drawing.Image)(resources.GetObject("e2.Image")));
-            this.e2.Location = new System.Drawing.Point(507, 228);
-            this.e2.Name = "e2";
-            this.e2.Size = new System.Drawing.Size(258, 141);
-            this.e2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e2.TabIndex = 26;
-            this.e2.TabStop = false;
-            this.e2.Visible = false;
+            this.la_visite.Location = new System.Drawing.Point(459, 288);
+            this.la_visite.Margin = new System.Windows.Forms.Padding(4);
+            this.la_visite.Name = "la_visite";
+            this.la_visite.Size = new System.Drawing.Size(251, 135);
+            this.la_visite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.la_visite.TabIndex = 93;
+            this.la_visite.TabStop = false;
             // 
-            // e1
+            // carte_grise
             // 
-            this.e1.Image = ((System.Drawing.Image)(resources.GetObject("e1.Image")));
-            this.e1.Location = new System.Drawing.Point(134, 228);
-            this.e1.Name = "e1";
-            this.e1.Size = new System.Drawing.Size(258, 141);
-            this.e1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.e1.TabIndex = 25;
-            this.e1.TabStop = false;
-            this.e1.Visible = false;
-            this.e1.MouseHover += new System.EventHandler(this.e1_MouseHover);
+            this.carte_grise.Location = new System.Drawing.Point(754, 114);
+            this.carte_grise.Margin = new System.Windows.Forms.Padding(4);
+            this.carte_grise.Name = "carte_grise";
+            this.carte_grise.Size = new System.Drawing.Size(251, 135);
+            this.carte_grise.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.carte_grise.TabIndex = 91;
+            this.carte_grise.TabStop = false;
             // 
-            // c9
+            // txtmr
             // 
-            this.c9.Image = ((System.Drawing.Image)(resources.GetObject("c9.Image")));
-            this.c9.Location = new System.Drawing.Point(896, 557);
-            this.c9.Name = "c9";
-            this.c9.Size = new System.Drawing.Size(258, 141);
-            this.c9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.c9.TabIndex = 24;
-            this.c9.TabStop = false;
-            this.c9.Visible = false;
+            this.txtmr.BackColor = System.Drawing.Color.White;
+            this.txtmr.Location = new System.Drawing.Point(224, 171);
+            this.txtmr.Margin = new System.Windows.Forms.Padding(4);
+            this.txtmr.Name = "txtmr";
+            this.txtmr.ReadOnly = true;
+            this.txtmr.Size = new System.Drawing.Size(190, 26);
+            this.txtmr.TabIndex = 79;
             // 
-            // c8
+            // label3
             // 
-            this.c8.Image = ((System.Drawing.Image)(resources.GetObject("c8.Image")));
-            this.c8.Location = new System.Drawing.Point(507, 557);
-            this.c8.Name = "c8";
-            this.c8.Size = new System.Drawing.Size(258, 141);
-            this.c8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.c8.TabIndex = 23;
-            this.c8.TabStop = false;
-            this.c8.Visible = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label3.ForeColor = System.Drawing.Color.Teal;
+            this.label3.Location = new System.Drawing.Point(16, 122);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 28);
+            this.label3.TabIndex = 94;
+            this.label3.Text = "Matricule";
             // 
-            // c7
+            // label4
             // 
-            this.c7.Image = ((System.Drawing.Image)(resources.GetObject("c7.Image")));
-            this.c7.Location = new System.Drawing.Point(143, 557);
-            this.c7.Name = "c7";
-            this.c7.Size = new System.Drawing.Size(258, 141);
-            this.c7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.c7.TabIndex = 22;
-            this.c7.TabStop = false;
-            this.c7.Visible = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.ForeColor = System.Drawing.Color.Teal;
+            this.label4.Location = new System.Drawing.Point(16, 265);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(154, 28);
+            this.label4.TabIndex = 97;
+            this.label4.Text = "Type Voiture";
             // 
-            // c6
+            // label5
             // 
-            this.c6.Image = ((System.Drawing.Image)(resources.GetObject("c6.Image")));
-            this.c6.Location = new System.Drawing.Point(896, 393);
-            this.c6.Name = "c6";
-            this.c6.Size = new System.Drawing.Size(258, 141);
-            this.c6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.c6.TabIndex = 21;
-            this.c6.TabStop = false;
-            this.c6.Visible = false;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label5.ForeColor = System.Drawing.Color.Teal;
+            this.label5.Location = new System.Drawing.Point(16, 220);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 28);
+            this.label5.TabIndex = 96;
+            this.label5.Text = "Model";
             // 
-            // c5
+            // label6
             // 
-            this.c5.Image = ((System.Drawing.Image)(resources.GetObject("c5.Image")));
-            this.c5.Location = new System.Drawing.Point(507, 384);
-            this.c5.Name = "c5";
-            this.c5.Size = new System.Drawing.Size(258, 141);
-            this.c5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.c5.TabIndex = 20;
-            this.c5.TabStop = false;
-            this.c5.Visible = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label6.ForeColor = System.Drawing.Color.Teal;
+            this.label6.Location = new System.Drawing.Point(16, 318);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(187, 28);
+            this.label6.TabIndex = 98;
+            this.label6.Text = "Type Carburant";
             // 
-            // c4
+            // label7
             // 
-            this.c4.Image = ((System.Drawing.Image)(resources.GetObject("c4.Image")));
-            this.c4.Location = new System.Drawing.Point(143, 393);
-            this.c4.Name = "c4";
-            this.c4.Size = new System.Drawing.Size(258, 141);
-            this.c4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.c4.TabIndex = 19;
-            this.c4.TabStop = false;
-            this.c4.Visible = false;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label7.ForeColor = System.Drawing.Color.Teal;
+            this.label7.Location = new System.Drawing.Point(16, 168);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 28);
+            this.label7.TabIndex = 95;
+            this.label7.Text = "Marque";
             // 
-            // c3
+            // label8
             // 
-            this.c3.Image = ((System.Drawing.Image)(resources.GetObject("c3.Image")));
-            this.c3.Location = new System.Drawing.Point(896, 228);
-            this.c3.Name = "c3";
-            this.c3.Size = new System.Drawing.Size(258, 141);
-            this.c3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.c3.TabIndex = 18;
-            this.c3.TabStop = false;
-            this.c3.Visible = false;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label8.ForeColor = System.Drawing.Color.Teal;
+            this.label8.Location = new System.Drawing.Point(16, 362);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 28);
+            this.label8.TabIndex = 99;
+            this.label8.Text = "Prix";
             // 
-            // c2
+            // txtmt
             // 
-            this.c2.Image = ((System.Drawing.Image)(resources.GetObject("c2.Image")));
-            this.c2.Location = new System.Drawing.Point(507, 228);
-            this.c2.Name = "c2";
-            this.c2.Size = new System.Drawing.Size(258, 141);
-            this.c2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.c2.TabIndex = 17;
-            this.c2.TabStop = false;
-            this.c2.Visible = false;
+            this.txtmt.BackColor = System.Drawing.Color.White;
+            this.txtmt.Location = new System.Drawing.Point(224, 122);
+            this.txtmt.Margin = new System.Windows.Forms.Padding(4);
+            this.txtmt.Name = "txtmt";
+            this.txtmt.ReadOnly = true;
+            this.txtmt.Size = new System.Drawing.Size(190, 26);
+            this.txtmt.TabIndex = 78;
             // 
-            // c1
+            // txtp
             // 
-            this.c1.Image = ((System.Drawing.Image)(resources.GetObject("c1.Image")));
-            this.c1.Location = new System.Drawing.Point(143, 228);
-            this.c1.Name = "c1";
-            this.c1.Size = new System.Drawing.Size(258, 141);
-            this.c1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.c1.TabIndex = 16;
-            this.c1.TabStop = false;
-            this.c1.Visible = false;
+            this.txtp.BackColor = System.Drawing.Color.White;
+            this.txtp.Location = new System.Drawing.Point(224, 365);
+            this.txtp.Margin = new System.Windows.Forms.Padding(4);
+            this.txtp.Name = "txtp";
+            this.txtp.ReadOnly = true;
+            this.txtp.Size = new System.Drawing.Size(190, 26);
+            this.txtp.TabIndex = 83;
+            // 
+            // tableaux
+            // 
+            this.tableaux.BackgroundColor = System.Drawing.Color.White;
+            this.tableaux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableaux.Location = new System.Drawing.Point(92, 499);
+            this.tableaux.Name = "tableaux";
+            this.tableaux.RowHeadersWidth = 62;
+            this.tableaux.RowTemplate.Height = 28;
+            this.tableaux.Size = new System.Drawing.Size(876, 209);
+            this.tableaux.TabIndex = 17;
             // 
             // rechercher
             // 
@@ -346,153 +312,22 @@
             this.rechercher.FillColor = System.Drawing.Color.Teal;
             this.rechercher.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rechercher.ForeColor = System.Drawing.Color.White;
-            this.rechercher.Location = new System.Drawing.Point(558, 136);
+            this.rechercher.Location = new System.Drawing.Point(224, 415);
             this.rechercher.Name = "rechercher";
             this.rechercher.Size = new System.Drawing.Size(180, 45);
             this.rechercher.TabIndex = 15;
             this.rechercher.Text = "Chercher";
             this.rechercher.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(42, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 29);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Type De Voiture";
-            // 
-            // cbtype
-            // 
-            this.cbtype.FormattingEnabled = true;
-            this.cbtype.Items.AddRange(new object[] {
-            "Voiture De Luxe",
-            "Voiture Économique",
-            "Voiture Cabriolet"});
-            this.cbtype.Location = new System.Drawing.Point(246, 137);
-            this.cbtype.Name = "cbtype";
-            this.cbtype.Size = new System.Drawing.Size(243, 28);
-            this.cbtype.TabIndex = 12;
-            // 
-            // l9
-            // 
-            this.l9.Image = ((System.Drawing.Image)(resources.GetObject("l9.Image")));
-            this.l9.Location = new System.Drawing.Point(896, 557);
-            this.l9.Name = "l9";
-            this.l9.Size = new System.Drawing.Size(258, 141);
-            this.l9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.l9.TabIndex = 11;
-            this.l9.TabStop = false;
-            this.l9.Visible = false;
-            this.l9.MouseHover += new System.EventHandler(this.pictureBox7_MouseHover);
-            // 
-            // l2
-            // 
-            this.l2.Image = ((System.Drawing.Image)(resources.GetObject("l2.Image")));
-            this.l2.Location = new System.Drawing.Point(507, 228);
-            this.l2.Name = "l2";
-            this.l2.Size = new System.Drawing.Size(258, 141);
-            this.l2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.l2.TabIndex = 10;
-            this.l2.TabStop = false;
-            this.l2.Visible = false;
-            this.l2.MouseHover += new System.EventHandler(this.pictureBox7_MouseHover);
-            // 
-            // l1
-            // 
-            this.l1.Image = ((System.Drawing.Image)(resources.GetObject("l1.Image")));
-            this.l1.Location = new System.Drawing.Point(143, 228);
-            this.l1.Name = "l1";
-            this.l1.Size = new System.Drawing.Size(258, 141);
-            this.l1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.l1.TabIndex = 9;
-            this.l1.TabStop = false;
-            this.l1.Visible = false;
-            this.l1.MouseHover += new System.EventHandler(this.pictureBox7_MouseHover);
-            // 
-            // l6
-            // 
-            this.l6.Image = ((System.Drawing.Image)(resources.GetObject("l6.Image")));
-            this.l6.Location = new System.Drawing.Point(896, 393);
-            this.l6.Name = "l6";
-            this.l6.Size = new System.Drawing.Size(258, 141);
-            this.l6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.l6.TabIndex = 8;
-            this.l6.TabStop = false;
-            this.l6.Visible = false;
-            this.l6.MouseHover += new System.EventHandler(this.pictureBox7_MouseHover);
-            // 
-            // l3
-            // 
-            this.l3.Image = ((System.Drawing.Image)(resources.GetObject("l3.Image")));
-            this.l3.Location = new System.Drawing.Point(896, 228);
-            this.l3.Name = "l3";
-            this.l3.Size = new System.Drawing.Size(258, 141);
-            this.l3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.l3.TabIndex = 8;
-            this.l3.TabStop = false;
-            this.l3.Visible = false;
-            this.l3.MouseHover += new System.EventHandler(this.pictureBox7_MouseHover);
-            // 
-            // l8
-            // 
-            this.l8.Image = ((System.Drawing.Image)(resources.GetObject("l8.Image")));
-            this.l8.Location = new System.Drawing.Point(507, 557);
-            this.l8.Name = "l8";
-            this.l8.Size = new System.Drawing.Size(258, 141);
-            this.l8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.l8.TabIndex = 7;
-            this.l8.TabStop = false;
-            this.l8.Visible = false;
-            this.l8.MouseHover += new System.EventHandler(this.pictureBox7_MouseHover);
-            // 
-            // l5
-            // 
-            this.l5.Image = ((System.Drawing.Image)(resources.GetObject("l5.Image")));
-            this.l5.Location = new System.Drawing.Point(507, 393);
-            this.l5.Name = "l5";
-            this.l5.Size = new System.Drawing.Size(258, 141);
-            this.l5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.l5.TabIndex = 7;
-            this.l5.TabStop = false;
-            this.l5.Visible = false;
-            this.l5.MouseHover += new System.EventHandler(this.pictureBox7_MouseHover);
-            // 
-            // l7
-            // 
-            this.l7.Image = ((System.Drawing.Image)(resources.GetObject("l7.Image")));
-            this.l7.Location = new System.Drawing.Point(143, 557);
-            this.l7.Name = "l7";
-            this.l7.Size = new System.Drawing.Size(258, 141);
-            this.l7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.l7.TabIndex = 6;
-            this.l7.TabStop = false;
-            this.l7.Visible = false;
-            this.l7.MouseHover += new System.EventHandler(this.pictureBox7_MouseHover);
-            // 
-            // l4
-            // 
-            this.l4.Image = ((System.Drawing.Image)(resources.GetObject("l4.Image")));
-            this.l4.Location = new System.Drawing.Point(143, 393);
-            this.l4.Name = "l4";
-            this.l4.Size = new System.Drawing.Size(258, 141);
-            this.l4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.l4.TabIndex = 6;
-            this.l4.TabStop = false;
-            this.l4.Visible = false;
-            this.l4.MouseHover += new System.EventHandler(this.pictureBox7_MouseHover);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Teal;
+            this.panel2.Controls.Add(this.precedentGC);
             this.panel2.Controls.Add(this.precedentGV);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1250, 100);
+            this.panel2.Size = new System.Drawing.Size(1250, 86);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -514,12 +349,12 @@
             this.label1.BackColor = System.Drawing.Color.Teal;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(444, 23);
+            this.label1.Location = new System.Drawing.Point(438, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(379, 57);
+            this.label1.Size = new System.Drawing.Size(160, 57);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Gestion De Voiture";
+            this.label1.Text = "Voiture";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2BorderlessForm1
@@ -528,45 +363,56 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // txttv
+            // 
+            this.txttv.BackColor = System.Drawing.Color.White;
+            this.txttv.Location = new System.Drawing.Point(224, 268);
+            this.txttv.Margin = new System.Windows.Forms.Padding(4);
+            this.txttv.Name = "txttv";
+            this.txttv.ReadOnly = true;
+            this.txttv.Size = new System.Drawing.Size(190, 26);
+            this.txttv.TabIndex = 105;
+            // 
+            // txttc
+            // 
+            this.txttc.BackColor = System.Drawing.Color.White;
+            this.txttc.Location = new System.Drawing.Point(224, 320);
+            this.txttc.Margin = new System.Windows.Forms.Padding(4);
+            this.txttc.Name = "txttc";
+            this.txttc.ReadOnly = true;
+            this.txttc.Size = new System.Drawing.Size(190, 26);
+            this.txttc.TabIndex = 106;
+            // 
+            // precedentGC
+            // 
+            this.precedentGC.AutoSize = true;
+            this.precedentGC.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.precedentGC.ForeColor = System.Drawing.Color.White;
+            this.precedentGC.Location = new System.Drawing.Point(904, 37);
+            this.precedentGC.Name = "precedentGC";
+            this.precedentGC.Size = new System.Drawing.Size(113, 29);
+            this.precedentGC.TabIndex = 6;
+            this.precedentGC.Text = "précedent ";
+            this.precedentGC.Click += new System.EventHandler(this.precedentGC_Click);
+            // 
             // voiture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1250, 732);
+            this.ClientSize = new System.Drawing.Size(1055, 732);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "voiture";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "voiture";
+            this.Load += new System.EventHandler(this.voiture_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.e8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.e1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.l4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voiture_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.la_visite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carte_grise)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableaux)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -578,37 +424,30 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox l3;
-        private System.Windows.Forms.PictureBox l5;
-        private System.Windows.Forms.PictureBox l4;
-        private System.Windows.Forms.PictureBox l9;
-        private System.Windows.Forms.PictureBox l2;
-        private System.Windows.Forms.PictureBox l1;
-        private System.Windows.Forms.PictureBox l6;
-        private System.Windows.Forms.PictureBox l8;
-        private System.Windows.Forms.PictureBox l7;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbtype;
         private Guna.UI2.WinForms.Guna2Button rechercher;
         private System.Windows.Forms.Label precedentGV;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private System.Windows.Forms.PictureBox c9;
-        private System.Windows.Forms.PictureBox c8;
-        private System.Windows.Forms.PictureBox c7;
-        private System.Windows.Forms.PictureBox c6;
-        private System.Windows.Forms.PictureBox c5;
-        private System.Windows.Forms.PictureBox c4;
-        private System.Windows.Forms.PictureBox c3;
-        private System.Windows.Forms.PictureBox c2;
-        private System.Windows.Forms.PictureBox c1;
-        private System.Windows.Forms.PictureBox e6;
-        private System.Windows.Forms.PictureBox e3;
-        private System.Windows.Forms.PictureBox e2;
-        private System.Windows.Forms.PictureBox e1;
-        private System.Windows.Forms.PictureBox e8;
-        private System.Windows.Forms.PictureBox e7;
-        private System.Windows.Forms.PictureBox e4;
-        private System.Windows.Forms.PictureBox e5;
-        private System.Windows.Forms.PictureBox e9;
+        private System.Windows.Forms.DataGridView tableaux;
+        private System.Windows.Forms.Label lb_lv;
+        private System.Windows.Forms.Label lb_v;
+        private System.Windows.Forms.TextBox txtmd;
+        private System.Windows.Forms.PictureBox assur;
+        private System.Windows.Forms.PictureBox voiture_pb;
+        private System.Windows.Forms.PictureBox la_visite;
+        private System.Windows.Forms.PictureBox carte_grise;
+        private System.Windows.Forms.TextBox txtmr;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtmt;
+        private System.Windows.Forms.TextBox txtp;
+        private System.Windows.Forms.Label lb_ass;
+        private System.Windows.Forms.Label lb_cg;
+        private System.Windows.Forms.TextBox txttc;
+        private System.Windows.Forms.TextBox txttv;
+        private System.Windows.Forms.Label precedentGC;
     }
 }

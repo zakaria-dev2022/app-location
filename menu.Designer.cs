@@ -102,9 +102,9 @@
             // 
             this.pictureBoxGV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxGV.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxGV.Image")));
-            this.pictureBoxGV.Location = new System.Drawing.Point(22, 199);
+            this.pictureBoxGV.Location = new System.Drawing.Point(12, 155);
             this.pictureBoxGV.Name = "pictureBoxGV";
-            this.pictureBoxGV.Size = new System.Drawing.Size(258, 141);
+            this.pictureBoxGV.Size = new System.Drawing.Size(286, 185);
             this.pictureBoxGV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxGV.TabIndex = 3;
             this.pictureBoxGV.TabStop = false;
@@ -114,9 +114,9 @@
             // 
             this.pictureBoxGC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxGC.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxGC.Image")));
-            this.pictureBoxGC.Location = new System.Drawing.Point(348, 199);
+            this.pictureBoxGC.Location = new System.Drawing.Point(348, 155);
             this.pictureBoxGC.Name = "pictureBoxGC";
-            this.pictureBoxGC.Size = new System.Drawing.Size(258, 141);
+            this.pictureBoxGC.Size = new System.Drawing.Size(273, 185);
             this.pictureBoxGC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxGC.TabIndex = 4;
             this.pictureBoxGC.TabStop = false;
@@ -126,55 +126,58 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(659, 199);
+            this.pictureBox3.Location = new System.Drawing.Point(659, 155);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(258, 141);
+            this.pictureBox3.Size = new System.Drawing.Size(258, 185);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(41, 369);
+            this.label3.Location = new System.Drawing.Point(97, 362);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(222, 33);
+            this.label3.Size = new System.Drawing.Size(119, 42);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Gestion De Voiture";
+            this.label3.Text = "Voiture";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(368, 369);
+            this.label6.Location = new System.Drawing.Point(441, 362);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(207, 33);
+            this.label6.Size = new System.Drawing.Size(99, 42);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Gestion De Client";
+            this.label6.Text = "Client";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(681, 369);
+            this.label4.Location = new System.Drawing.Point(729, 362);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(239, 33);
+            this.label4.Size = new System.Drawing.Size(140, 42);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Gestion De Location";
+            this.label4.Text = "Location";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(954, 555);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
